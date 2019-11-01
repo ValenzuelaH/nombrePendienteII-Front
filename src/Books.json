@@ -22,11 +22,144 @@
             "priceInPesos": 777
        },
        {
-            "name": "Asd",
-            "authorName": "asd asd",
-            "releaseYear": 19442,
-            "amountOfPages": 1327,
-            "priceInPesos": 8880
-       }
+            "name": "El guardian invisible",
+            "authorName": "Dolores Redondo",
+            "releaseYear":  2012,
+            "amountOfPages": 440,
+            "priceInPesos": 888
+       },
+       {
+            "name": "La naranja mecanica",
+            "authorName": "Anthony Burguess",
+            "releaseYear": 1962,
+            "amountOfPages": 204,
+            "priceInPesos": 999
+        }, 
+        {
+            "name": "Alguien volo sobre el nido del cuco",
+            "authorName": "Ken Kesey",
+            "releaseYear": 1959,
+            "amountOfPages": 320,
+            "priceInPesos": 999
+        }, 
+        {
+            "name": "Triste, solitario y final",
+            "authorName": "Osvaldo Soriano",
+            "releaseYear": 1973,
+            "amountOfPages": 187,
+            "priceInPesos": 999
+        }, 
+        {
+            "name": "El juego del angel",
+            "authorName": "Carlos Ruiz Zafon",
+            "releaseYear": 2997,
+            "amountOfPages": 624,
+            "priceInPesos": 999
+        }, 
+        {
+            "name": "Dune",
+            "authorName": "Frank Herbert",
+            "releaseYear": 1965,
+            "amountOfPages": 734,
+            "priceInPesos": 999
+        },
+        {
+            "name": "Un mundo feliz",
+            "authorName": "Aldous Huxley",
+            "releaseYear": 1932,
+            "amountOfPages": 256,
+            "priceInPesos": 999
+        },
+        {
+            "name": "1q84",
+            "authorName": "Haruki Murakami",
+            "releaseYear": 2011,
+            "amountOfPages": 928,
+            "priceInPesos": 999
+        },
+        {
+            "name": "El cuenta de la criada",
+            "authorName": "Margaret Atwood",
+            "releaseYear": 1985,
+            "amountOfPages": 416,
+            "priceInPesos": 999
+        },
+        {
+            "name": "la conjura de los necios",
+            "authorName": "John Kennedy Toole",
+            "releaseYear": 1980,
+            "amountOfPages": 392,
+            "priceInPesos": 999
+        },
+        {
+            "name": "Los 7 locos",
+            "authorName": "Roberto Arlt",
+            "releaseYear": 1929,
+            "amountOfPages": 264,
+            "priceInPesos": 999
+        },
+        {
+            "name": "Lolita",
+            "authorName": "Vladimir Nabokov",
+            "releaseYear": 1955,
+            "amountOfPages": 392,
+            "priceInPesos": 999
+        },
+        {
+            "name": "Asi hablo Zaratustra",
+            "authorName": "Friedrich Nietzsche",
+            "releaseYear": 1883,
+            "amountOfPages": 352,
+            "priceInPesos": 999
+        },
+        {
+            "name": "Hamlet",
+            "authorName": "William Shakespeare",
+            "releaseYear": 1609,
+            "amountOfPages": 236,
+            "priceInPesos": 999
+        },
+        {
+            "name": "Tuya",
+            "authorName": "William Shakespeare",
+            "releaseYear": 2005,
+            "amountOfPages": 192,
+            "priceInPesos": 999
+        },
+        {
+            "name": "El Tunel",
+            "authorName": "Ernesto Sabato",
+            "releaseYear": 1946,
+            "amountOfPages": 168,
+            "priceInPesos": 999
+        },
+        {
+            "name": "El Silmarillion",
+            "authorName": "J. R. R. Tolkien",
+            "releaseYear": 1977,
+            "amountOfPages": 446,
+            "priceInPesos": 999
+        },
+        {
+            "name": "El señor de las moscas",
+            "authorName": "William Golding",
+            "releaseYear": 1954,
+            "amountOfPages": 224,
+            "priceInPesos": 999
+        },
+        {
+            "name": "Harry Potter",
+            "authorName": "J. K. Rowling",
+            "releaseYear": 1997,
+            "amountOfPages": 680,
+            "priceInPesos": 999
+        },
+        {
+            "name": "Juego de Tronos",
+            "authorName": "George R. R. Martin",
+            "releaseYear": 1996,
+            "amountOfPages": 694,
+            "priceInPesos": 999
+        }
     ]
 }

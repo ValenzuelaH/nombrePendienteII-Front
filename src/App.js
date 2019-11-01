@@ -84,6 +84,12 @@ class App extends React.Component {
           </div>
         </div>
       )
+
+    return(
+      <div>
+        <Footer/>
+      </div>
+    )
   }
 }
 
