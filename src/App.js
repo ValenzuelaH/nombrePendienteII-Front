@@ -3,6 +3,7 @@ import './App.css';
 import { Books } from './Books.json';
 import Navigation from './components/Navigation';
 import { findBookbyId, books , newBook, findBookByName } from './api';
+import Footer from './Footer';
 
 
 class App extends React.Component {
@@ -58,7 +59,7 @@ class App extends React.Component {
               <button
                 className="btn btn-danger"
                 onClick={this.readDescription.bind(this, i)}>
-                Ver!
+                Ver más!
               </button>
             </div>
             </div>  
@@ -82,7 +83,8 @@ class App extends React.Component {
             </div>
           </div>
         </div>
-  );
+      )
   }
 }
+
 export default App;
