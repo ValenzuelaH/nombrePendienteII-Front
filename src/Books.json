@@ -1,0 +1,32 @@
+{
+    "Books":[
+        {
+            "name": "Ficciones",
+            "authorName": "Jorge Luis Borges",
+            "releaseYear": 1944,
+            "amountOfPages": 137,
+            "priceInPesos": 888
+        },
+	{
+             "name": "1984",
+             "authorName": "George Orwell",
+             "releaseYear": 1949,
+             "amountOfPages": 349,
+ 	         "priceInPesos": 666
+	},
+        {
+            "name": "Tokyo blues",
+            "authorName": "Haruki Murakami",
+            "releaseYear": 1990,
+            "amountOfPages": 500,
+            "priceInPesos": 777
+       },
+       {
+            "name": "Asd",
+            "authorName": "asd asd",
+            "releaseYear": 19442,
+            "amountOfPages": 1327,
+            "priceInPesos": 8880
+       }
+    ]
+}

@@ -1,0 +1,137 @@
+body{
+	margin:0;
+	font-family: 'Roboto-Regular';
+	background-color: #fff;
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/Roboto-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'OleoScript-Regular';
+    src: url(../fonts/OleoScript-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'OleoScript-Bold';
+    src: url(../fonts/OleoScript-Bold.ttf) format('truetype');
+}
+body a{
+	transition: 0.5s all ease;
+	-webkit-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	-ms-transition: 0.5s all ease;
+	text-decoration:none;
+}
+h1,h2,h3,h4,h5,h6{
+	margin:0;			   
+}
+p{
+	margin:0;
+}
+ul,label{
+	margin:0;
+	padding:0;
+}
+body a:hover{
+	text-decoration:none;
+}
+
+.grid-footer-container {
+  display: grid;
+  grid: 120px / auto auto auto auto;
+  grid-gap: 100px;
+  background-color: #555;
+  padding: 10px 0; 
+  margin-top: 0.5em;
+}
+
+.footer {
+  background: #555;
+  padding: 5em 0;
+  z-index: 0;
+}
+.footer h4 {
+    font-size: 2.8em;
+    font-family: 'OleoScript-Regular';
+    line-height: 1em;
+    color: #AEE3EF;
+    margin-bottom: 0.5em;
+}
+.footer-left ul {
+  padding: 0;
+  margin: 0;
+}
+.footer-left ul li {
+	display: block;
+	font-size: 1em;
+	color: #fff;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	margin-bottom: 0.5em;
+}
+.footer-left ul li:nth-child(2),.footer-left ul li:nth-child(3) {
+  font-weight: 100;
+  color: #ebebeb;
+}
+.footer-left ul li a{
+	color: #fff;
+	text-decoration:none;
+}
+.footer-left ul li a:hover{
+	color: #AEE3EF;
+}
+.footer-right a {
+  display: inline-block;
+}
+.footer-right p {
+  color: #fff;
+  font-size: 1em;
+  letter-spacing: 1px;
+  margin: 1em 0 0;
+}
+.footer-right p a {
+  color: #AEE3EF;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+.footer-right p a:hover{
+	color: #fff;
+}
+.icons {
+    margin-top: 1.2em;
+}
+.icons ul li{
+	display:inline-block;
+	margin:0 .2em;
+}
+.icons ul li a.twitter{
+  background: url(../images/icons.png) no-repeat 0px 0px;
+  height: 24px;
+  display: block;
+  width: 24px;
+}
+.icons ul li a.facebook{
+  background: url(../images/icons.png) no-repeat -33px 0px;
+}
+.icons ul li a.chrome{
+  background: url(../images/icons.png) no-repeat -66px 0px;
+}
+.icons ul li a.pinterest{
+  background: url(../images/icons.png) no-repeat -99px 0px;
+}
+.icons ul li a.linkedin{
+  background: url(../images/icons.png) no-repeat -132px 0px;
+}
+.icons ul li a:hover {
+    transform: rotatey(360deg);
+	-webkit-transform: rotatey(360deg);
+	-moz-transform: rotatey(360deg);
+	-o-transform: rotatey(360deg);
+	-ms-transform: rotatey(360deg);
+	transition: 0.5s all ease;
+	-webkit-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	-ms-transition: 0.5s all ease;
+}
