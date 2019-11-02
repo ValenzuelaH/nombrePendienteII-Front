@@ -1,0 +1,28 @@
+.Book-Container {
+    align-items: center;
+
+}
+
+.Book-name{
+    font-size: 35px;
+    color: white;
+    width: 70%;
+    border-bottom: aqua solid 2px;
+    border-radius: 5px;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+#money{
+    color: #999388
+}
+.Info-Container{
+    justify-content: left;
+    width: auto;
+    color: navajowhite;
+}
+
+.children {
+    width: 30%;
+    margin-bottom: 20px;
+
+}
