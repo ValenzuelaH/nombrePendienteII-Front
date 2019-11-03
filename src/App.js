@@ -17,7 +17,7 @@ class App extends React.Component {
       showList: true,
       showBook: false,
       go:1
-    }
+    };
     this.handleAddBook = this.handleAddBook.bind(this);
   
   }
@@ -72,7 +72,7 @@ class App extends React.Component {
                 </div>
                 <div className="col-md-8">
                   <div className="row">
-                    { this.state.showList && myBooks }
+                      { this.state.showList && myBooks }
                     { this.state.showBook && <BookPage book={this.state.Books[this.state.go]}/> }
                   </div>
               </div>
