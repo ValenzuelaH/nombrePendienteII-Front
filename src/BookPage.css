@@ -1,0 +1,50 @@
+.Book-Container {
+    align-items: center;
+
+}
+
+.Book-name{
+    font-size: 55px;
+    color: white;
+    width: 70%;
+    border-bottom: aqua solid 2px;
+    border-radius: 5px;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+#money{
+    color: #999388;
+}
+
+.Info-Container{
+    font-size: 33px;
+    justify-content: left;
+    width: auto;
+    color: navajowhite;
+}
+
+.children {
+    width: 30%;
+    margin-bottom: 20px;
+
+}/*
+.Accept-Button{
+    background-color: #4CAF50;
+    border-radius: 2px;
+}
+.Cancel-Button{
+    background-color: #f44336;
+    border-radius: 2px;
+
+}
+.footer{
+    margin-top: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    justify-content: center;
+    width: 100%;
+    background-color: firebrick;
+    color: white;
+    text-align: center;
+}*/
