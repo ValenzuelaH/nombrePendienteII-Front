@@ -19,7 +19,16 @@ class App extends React.Component {
       go:1
     };
     this.handleAddBook = this.handleAddBook.bind(this);
-  
+    this.callToBack = this.callToBack.bind(this);
+  }
+
+  callToBack(){
+    this.setState(
+      {
+        showBook: false,
+        showList: true
+      }
+    )
   }
 
   readDescription(index) {
@@ -73,7 +82,7 @@ class App extends React.Component {
                 <div className="col-md-8">
                   <div className="row">
                       { this.state.showList && myBooks }
-                    { this.state.showBook && <BookPage book={this.state.Books[this.state.go]}/> }
+                    { this.state.showBook && <BookPage back={this.callToBack} book={this.state.Books[this.state.go]}/> }
                   </div>
               </div>
             </div>

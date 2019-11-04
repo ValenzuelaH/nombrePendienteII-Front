@@ -15,15 +15,20 @@ class BookPage extends React.Component {
 
   render(){
      return (
+         <div>
+         <div>
+        <button id="botton-back" type="button" class="btn btn-primary" onClick={this.props.back}>Atrás</button>
+        </div>
         <div className="Book-Container">
+        
             <div className="Book-name">
                {this.props.book.name}
             </div>
             <div className="Info-Container">
-                <div> Amount Of Pages: {this.props.book.amountOfPages} </div>
-                <div> Release year: {this.props.book.releaseYear} </div>
-                <div> Author: {this.props.book.authorName} </div>
-                <div id = "money"> Price in pesos: {this.props.book.priceInPesos} </div>
+                <div> Páginas: {this.props.book.amountOfPages} </div>
+                <div> Año de edición: {this.props.book.releaseYear} </div>
+                <div> Autor: {this.props.book.authorName} </div>
+                <div id = "money"> Precio: $ {this.props.book.priceInPesos} </div>
             </div>
 
             {/*<div className="footer">
@@ -31,6 +36,7 @@ class BookPage extends React.Component {
                     <button type="button" className="Accept-Button">I Love this Book!</button>
                     <button type="button" className="Cancel-Button">I prefer the movie</button>
             </div>*/}
+        </div>
         </div>
       )
   }
