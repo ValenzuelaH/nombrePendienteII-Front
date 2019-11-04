@@ -16,9 +16,6 @@ class BookPage extends React.Component {
   render(){
      return (
          <div>
-         <div>
-        <button id="botton-back" type="button" class="btn btn-primary" onClick={this.props.back}>Atrás</button>
-        </div>
         <div className="Book-Container">
         
             <div className="Book-name">
@@ -29,6 +26,9 @@ class BookPage extends React.Component {
                 <div> Año de edición: {this.props.book.releaseYear} </div>
                 <div> Autor: {this.props.book.authorName} </div>
                 <div id = "money"> Precio: $ {this.props.book.priceInPesos} </div>
+                <div>
+        <button id="botton-back" type="button" class="btn btn-primary" onClick={this.props.back}>Atrás</button>
+        </div>
             </div>
 
             {/*<div className="footer">
