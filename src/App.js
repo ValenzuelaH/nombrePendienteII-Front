@@ -87,6 +87,7 @@ class App extends React.Component {
               </div>
             </div>
           </div>
+          <Footer title = {this.state.title}></Footer>
         </div>
       )
   }
