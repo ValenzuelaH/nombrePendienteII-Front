@@ -1,0 +1,73 @@
+.Login-Container{
+    margin: 123px auto auto;
+    width: 40%;
+    padding: 10px 0px 10px 10px;
+    -webkit-box-shadow: 3px 1.5px 8px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 1.5px 8px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 1.5px 8px 0px rgba(0,0,0,0.75);
+    background-color: coral;
+    justify-content: center;
+}
+.Welcome-Container{
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 1px solid #0F2027;
+    border-radius: 1px;
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+.UserName-Container{
+    display: inline;
+    margin-right: 20px;
+    font-size: 20px;
+    justify-content: center;
+}
+.Password-container{
+    display: flex;
+}
+.UserNameText-Container{
+    display: inline;
+    background-color: #ff7f3f;
+    border-radius: 100px;
+    border: 1px solid #203A43;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 160px;
+    display:inline;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+}
+.Flex-container{
+    display: inline;
+}
+
+.Button-Container{
+    display: flex;
+    justify-content: center;
+}
+.LogInButton{
+    margin-right: 12px;
+    color:#000000;
+    border: 1px solid #000000;
+    border-radius: 2px;
+}
+.LogInButton:hover{
+    color:#ffffff;
+    background-color: #37b97b;
+}
+
+.registerButton{
+    margin-right: 12px;
+    color:#000000;
+    border: 1px solid #000000;
+    border-radius: 2px;
+}
+
+.registerButton:hover{
+    color: #ffffff;
+    background-color: #127bca;
+}
