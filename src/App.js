@@ -1,4 +1,5 @@
 import React from 'react';
+import {Fragment} from 'react';
 import axios from 'axios';
 import { books, findBookbyId, findBookByName, newBook } from './api';
 import './App.css';
@@ -6,7 +7,6 @@ import { Books } from './Books.json';
 import Navigation from './components/Navigation';
 import Footer from './Footer';
 import BookPage from './BookPage';
-
 
 class App extends React.Component {
   constructor(props){
@@ -38,7 +38,6 @@ class App extends React.Component {
 
   render(){
 
-
     const myBooks = this.state.Books.map((book, i) => {
       return(
         <div className="col-md-4" key={i}>
@@ -62,7 +61,7 @@ class App extends React.Component {
         </div>
         )
     })
-    
+
     return (
         <div className="App">
           <Navigation title = {this.state.title} books={this.state.Books}/>
