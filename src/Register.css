@@ -1,0 +1,52 @@
+.Register-Container{
+    margin-top: 113px;
+    margin-left: 440px;
+    margin-right: 1200px;
+
+    border: 1px solid red;
+    width: 520px;
+
+    padding-left: 12px;
+    border-radius: 5px;
+    background-color: #4267b2;
+    align-items: center;
+
+}
+
+.Info-Container{
+    font-size: 45px;
+    color: white;
+    margin-bottom: 20px;
+}
+.Generic-Input{
+    background-color: #1f2346;
+    color: #ffffff;
+    padding-left: 4px;
+    padding-right: 4px;
+    border: 1px solid white;
+    border-radius: 1px;
+    display: inline;
+    margin-bottom: 12px;
+}
+.a{
+    display: inline;
+}
+
+.Button-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.SendButton-container{
+    margin-right: 17px;
+    background-color: #37b97b;
+    color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 2px;
+}
+.CancelButton-container{
+    background-color: firebrick;
+    border: 1px solid #000000;
+    border-radius: 2px;
+}
