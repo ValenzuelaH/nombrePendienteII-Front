@@ -3,6 +3,7 @@ import {Fragment} from 'react';
 import axios from 'axios';
 import { books, findBookbyId, findBookByName, newBook } from './api';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Books } from './Books.json';
 import Navigation from './components/Navigation';
 import Footer from './Footer';

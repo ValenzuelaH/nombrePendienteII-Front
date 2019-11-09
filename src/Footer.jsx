@@ -37,6 +37,7 @@ class Footer extends React.Component{
             </p>
     
             <p>{this.props.title} &copy; 2019</p>
+            <p>Powered by <strong>nombrePendienteII</strong></p>
           </div>
   
         </footer>
