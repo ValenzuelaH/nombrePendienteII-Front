@@ -1,7 +1,6 @@
 import { Redirect } from 'react-router-dom';
 import React from 'react';
-
-//import CriteriaDropdown from './CriteriaDropdown'
+import CriteriaDropdown from './CriteriaDropdown'
 
 export default class SearchForm extends React.Component {
   constructor(props){
@@ -51,8 +50,12 @@ render() {
                               placeholder="Ingrese texto de busqueda" 
                           />
                       </div>
-                      <button type="submit" className="btn btn-outline-light">Buscar!</button>
-                   
+                      <div>
+                        <CriteriaDropdown/>
+                      </div>
+                      <div>
+                        <button type="submit" className="btn btn-outline-light">Buscar!</button>
+                      </div>
               </form>
             </div>
           );
