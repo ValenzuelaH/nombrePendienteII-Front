@@ -22,7 +22,8 @@ class Navigation extends React.Component{
             
             <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
               {items.map(function(currentValue, index){
-                return <NavBarItem name={currentValue.name}
+                return <NavBarItem key={currentValue.code}
+                                   name={currentValue.name}
                                    route={currentValue.route}
                                    user ={"aUserName"}/>;  
               })}

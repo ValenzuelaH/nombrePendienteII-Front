@@ -13,12 +13,11 @@ export default class NavBarItem extends React.Component {
     }
 
     render(){
-        return(<li className="nav-item">
-            
-            <Link className="nav-link" to={{
-                pathname: this.props.router,
-                state: { id: this.state.user} }}>{this.props.name == "Usuario"? this.props.user : this.props.name }</Link>
-
+        return(
+            <li className="nav-item">
+                <Link className="nav-link" to={this.props.route}>
+                    {this.props.name == "Usuario"? this.props.user : this.props.name }
+                </Link>
             </li>);
     }
 }
@@ -27,3 +26,6 @@ export default class NavBarItem extends React.Component {
 //<Link className="nav-link" to={this.props.id}>{this.props.name }</Link>
 
 
+//
+//    <Link className="nav-link" to={{
+//        pathname: this.props.router}}></Link>

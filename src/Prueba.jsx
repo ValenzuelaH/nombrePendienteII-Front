@@ -1,3 +1,4 @@
+import React from 'react';
 
 export default class Prueba extends React.Component {
 
