@@ -1,7 +1,5 @@
 import React from 'react';
-import {Navbar, Nav, Button, Form, FormControl} from 'react-bootstrap';
-//import SearchForm from './SearchForm';
-
+import SearchForm from './SearchForm';
 import NavBarItem from './Navbaritem';
 
 var items = [ {"code":"0", "name":"Quienes somos?", "route":"/about_us"},
@@ -30,6 +28,7 @@ class Navigation extends React.Component{
               })}
             </ul>
             </div>
+            <SearchForm/>
             </nav>
             );
           }
