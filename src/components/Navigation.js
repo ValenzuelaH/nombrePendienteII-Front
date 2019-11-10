@@ -17,7 +17,7 @@ class Navigation extends React.Component{
                 {this.props.title}
             </a>
             <span className="badge badge-pill badge-danger  ml-2">
-              {this.props.fromComponent == '/home'? "En Stock: " : "Resultados: " } { this.props.books.length}
+              {this.props.fromComponent === '/home'? "En Stock: " : "Resultados: " } { this.props.books.length}
             </span>
             
             <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
