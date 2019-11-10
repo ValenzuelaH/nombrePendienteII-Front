@@ -13,7 +13,7 @@ class Navigation extends React.Component{
           <nav className="navbar navbar-dar navbar-expand-lg navbar-dark bg-dark">
             
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a className="navbar-brand" href="">
+            <a className="navbar-brand" href="/">
                 {this.props.title}
             </a>
             <span className="badge badge-pill badge-danger  ml-2">

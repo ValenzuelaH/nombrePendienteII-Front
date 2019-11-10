@@ -17,7 +17,6 @@ export default class SearchForm extends React.Component {
   }
 
   handleSubmit(e) {
-    console.log("HOLAAAA")
     e.preventDefault();
     this.setState({
         evaluate: true
@@ -32,21 +31,21 @@ export default class SearchForm extends React.Component {
 }
 
   handleCriteria(e){
-    console.log(e.target.value)
     this.setState({criteria: e.target.value})
   }
 
 render() {
-  //Esto lo trae bien 
-  console.log(this.state.q)
   if (this.state.redirect){
     window.location.reload();
   }
-  console.log(this.state)
-  if (this.state.evaluate && this.state.q !== ''){
-      this.setState({q: '', criteria: '', redirect: true, evaluate: false});
+  const memento = {
+      q: this.state.q,
+      criteria: this.state.criteria
+  }
+  console.log(memento)
+  if (this.state.evaluate && this.state.q !== '' && this.state.criteria !== ''){
       return <Redirect to={{pathname: '/content',
-      state:{q : this.state.q , criteria: this.state.criteria}}}/>
+      state:{memento}}}/>
       }
   return (
         <div>

@@ -2,11 +2,7 @@ import React from 'react';
 import './css/Footer.css';
 
 class Footer extends React.Component{
-  constructor(props){
-    super(props);
-  }
-
-    render(){
+   render(){
       return(
         <React.Fragment>
         <footer className="footer-distributed">
@@ -23,13 +19,13 @@ class Footer extends React.Component{
           <div className="footer-left">
     
             <p className="footer-links">
-              <a className="link-1" href="">Inicio</a>
+              <a className="link-1" href="/">Inicio</a>
     
               {/* <a href="#">Blog</a>
     
               <a href="#">Pricing</a> */}
     
-              <a href="">Quienes Somos</a>
+              <a href="/">Quienes Somos</a>
     
               {/* <a href="#">Faq</a>
     

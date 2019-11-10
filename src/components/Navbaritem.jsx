@@ -15,7 +15,7 @@ export default class NavBarItem extends React.Component {
         return(
             <li className="nav-item">
                 <Link className="nav-link" to={this.props.route}>
-                    {this.props.name == "Usuario"? this.props.user : this.props.name }
+                    {this.props.name === "Usuario"? this.props.user : this.props.name }
                 </Link>
             </li>);
     }

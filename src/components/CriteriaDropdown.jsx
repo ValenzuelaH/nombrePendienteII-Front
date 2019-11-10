@@ -6,7 +6,7 @@ class CriteriaDropdown extends React.Component{
         return(
             <div>
                 <select onChange={this.props.action} className ="btn btn-secondary dropdown-toggle"type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <option selected value="origin">    -- Seleccione un criterio --</option>
+                    <option defaultValue="origin">             -- Seleccione un criterio --</option>
                     <option value="name">               Nombre (libro)</option>
                     <option value="author">             Nombre (autor)</option>
                     <option value="id">                 ID</option>
