@@ -25,6 +25,7 @@ class BookPage extends React.Component {
                 <div> Páginas: {this.props.book.amountOfPages} </div>
                 <div> Año de edición: {this.props.book.releaseYear} </div>
                 <div> Autor: {this.props.book.authorName} </div>
+                <div> Género: {this.props.book.genre} </div>
                 <div id = "money"> Precio: $ {this.props.book.priceInPesos} </div>
                 <div>
         <button id="botton-back" type="button" class="btn btn-primary" onClick={this.props.back}>Atrás</button>
