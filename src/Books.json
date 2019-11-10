@@ -5,161 +5,192 @@
             "authorName": "Jorge Luis Borges",
             "releaseYear": 1944,
             "amountOfPages": 137,
-            "priceInPesos": 888
+            "priceInPesos": 888,
+            "genre": "STORY"
         },
 	{
              "name": "1984",
              "authorName": "George Orwell",
              "releaseYear": 1949,
              "amountOfPages": 349,
- 	         "priceInPesos": 666
+             "priceInPesos": 666,
+             "genre":"DYSTOPIAN"
 	},
         {
             "name": "Tokyo blues",
             "authorName": "Haruki Murakami",
             "releaseYear": 1990,
             "amountOfPages": 500,
-            "priceInPesos": 777
+            "priceInPesos": 777,
+            "genre": "PINKNOVEL"
        },
        {
             "name": "El guardian invisible",
             "authorName": "Dolores Redondo",
             "releaseYear":  2012,
             "amountOfPages": 440,
-            "priceInPesos": 888
+            "priceInPesos": 888,
+            "genre":"DETECTIVESTORY"
        },
        {
             "name": "La naranja mecanica",
             "authorName": "Anthony Burguess",
             "releaseYear": 1962,
             "amountOfPages": 204,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre":"DYSTOPIAN"
         }, 
         {
             "name": "Alguien volo sobre el nido del cuco",
             "authorName": "Ken Kesey",
             "releaseYear": 1959,
             "amountOfPages": 320,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre":"DRAMA"
         }, 
+        {
+            "name": "La Nausea",
+            "authorName": "Jean Paul Sartre",
+            "releaseYear": 1044,
+            "amountOfPages": 364,
+            "priceInPesos": 1000,
+            "genre":"ESSAY"
+        },
         {
             "name": "Triste, solitario y final",
             "authorName": "Osvaldo Soriano",
             "releaseYear": 1973,
             "amountOfPages": 187,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre": "STORY"
         }, 
         {
             "name": "El juego del angel",
             "authorName": "Carlos Ruiz Zafon",
             "releaseYear": 2997,
             "amountOfPages": 624,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre": "STORY"
         }, 
         {
             "name": "Dune",
             "authorName": "Frank Herbert",
             "releaseYear": 1965,
             "amountOfPages": 734,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre":"SCIFI"
         },
         {
             "name": "Un mundo feliz",
             "authorName": "Aldous Huxley",
             "releaseYear": 1932,
             "amountOfPages": 256,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre":"DYSTOPIAN"
         },
         {
             "name": "1q84",
             "authorName": "Haruki Murakami",
             "releaseYear": 2011,
             "amountOfPages": 928,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre": "STORY"
         },
         {
             "name": "El cuenta de la criada",
             "authorName": "Margaret Atwood",
             "releaseYear": 1985,
             "amountOfPages": 416,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre":"DYSTOPIAN"
         },
         {
             "name": "la conjura de los necios",
             "authorName": "John Kennedy Toole",
             "releaseYear": 1980,
             "amountOfPages": 392,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre":"COMEDY"
         },
         {
             "name": "Los 7 locos",
             "authorName": "Roberto Arlt",
             "releaseYear": 1929,
             "amountOfPages": 264,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre":"DRAMA"
         },
         {
             "name": "Lolita",
             "authorName": "Vladimir Nabokov",
             "releaseYear": 1955,
             "amountOfPages": 392,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre":"DRAMA"
         },
         {
             "name": "Asi hablo Zaratustra",
             "authorName": "Friedrich Nietzsche",
             "releaseYear": 1883,
             "amountOfPages": 352,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre":"ESSAY"
         },
         {
             "name": "Hamlet",
             "authorName": "William Shakespeare",
             "releaseYear": 1609,
             "amountOfPages": 236,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre": "THEATER"
         },
         {
             "name": "Tuya",
             "authorName": "William Shakespeare",
             "releaseYear": 2005,
             "amountOfPages": 192,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre":"DETECTIVESTORY"
         },
         {
             "name": "El Tunel",
             "authorName": "Ernesto Sabato",
             "releaseYear": 1946,
             "amountOfPages": 168,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre":"DETECTIVESTORY"
         },
         {
             "name": "El Silmarillion",
             "authorName": "J. R. R. Tolkien",
             "releaseYear": 1977,
             "amountOfPages": 446,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre": "FANTASTIC"
         },
         {
             "name": "El señor de las moscas",
             "authorName": "William Golding",
             "releaseYear": 1954,
             "amountOfPages": 224,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre": "DRAMA"
         },
         {
             "name": "Harry Potter",
             "authorName": "J. K. Rowling",
             "releaseYear": 1997,
             "amountOfPages": 680,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre": "FANTASTIC"
         },
         {
             "name": "Juego de Tronos",
             "authorName": "George R. R. Martin",
             "releaseYear": 1996,
             "amountOfPages": 694,
-            "priceInPesos": 999
+            "priceInPesos": 999,
+            "genre": "FANTASTIC"
         }
     ]
 }
