@@ -5,7 +5,6 @@ import { Books } from './Books.json';
 import Navigation from './components/Navigation';
 import Footer from './Footer';
 import BookPage from './BookPage';
-
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -38,6 +37,7 @@ class App extends React.Component {
   }
 
   handleAddBook(book) {
+    
     this.setState({
       Books: [...this.state.Books, book]
     })
