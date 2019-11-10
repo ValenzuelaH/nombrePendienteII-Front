@@ -39,9 +39,7 @@ export default class Content extends React.Component{
         const  criteria = this.props.location.state.criteria
           if (query !== '' && criteria !==''){
             if(criteria === 'origin' || criteria === 'name'){
-                console.log("ACAAAA")
-                console.log(query)
-                findBookByName(query).then(result => {this.setState({toShow: [result], mustBeRender:true})});
+                findBookByName(query).then(result => {result === null && this.setState({toShow: [result], mustBeRender:true})});
             }
             if(criteria === 'author'){
                 findBookByAuthorName(query).then(result => {this.setState({toShow: result, mustBeRender:true})});
