@@ -71,7 +71,7 @@ class App extends React.Component {
 
     return (
         <div className="App">
-          <Navigation title = {this.state.title} books={this.state.Books}/>
+          <Navigation title = {this.state.title} books={this.state.Books} fromComponent="/home"/>
             <div className="container">
              <div className="row mt-4">
                 <div className="col-md-3 text-center">

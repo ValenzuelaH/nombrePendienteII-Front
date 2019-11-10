@@ -37,9 +37,7 @@ export default class Content extends React.Component{
     componentDidMount(){
         const  query  = this.props.location.state.q
         const  criteria = this.props.location.state.criteria
-        console.log(query)
-        console.log(criteria)
-        if (query !== '' && criteria !==''){
+          if (query !== '' && criteria !==''){
             if(criteria === 'origin' || criteria === 'name'){
                 findBookByName(query).then(result => {this.setState({toShow: result, mustBeRender:true})});
             }
@@ -48,6 +46,7 @@ export default class Content extends React.Component{
             }
             if(criteria === 'id'){
                 const aID = query.parseInt
+                console.log(typeof(aID))
                 findBookbyId(aID).then(result => {this.setState({toShow: result, mustBeRender:true})});
                 //Y si no es un numero? Contemplar ese caso
             }

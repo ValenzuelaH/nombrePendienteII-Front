@@ -8,7 +8,8 @@ export default class SearchForm extends React.Component {
     this.state={
       q: '',
       criteria: 'origin',
-      evaluate: false
+      evaluate: false,
+      redirect: false
     }
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -34,7 +35,7 @@ export default class SearchForm extends React.Component {
   }
 
 render() {
-  if (this.state.redirect){
+  if (this.props.fromComponent==='/content' || this.state.redirect){
     window.location.reload();
   }
   if (this.state.evaluate && this.state.q !== ''){
