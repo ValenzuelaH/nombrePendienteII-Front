@@ -1,15 +1,37 @@
 import React from 'react'
 import { findBookbyId, findBookByAuthorName, findBookByName } from './api';
-
+import Navigation from './components/Navigation';
+import BookPage from './BookPage';
+import Footer from './Footer';
 
 export default class Content extends React.Component{
 
     constructor(props){
         super(props);
         this.state={
+            showBook: false,
+            showList: true,
             toShow: [],
-            mustBeRender:false
+            go: 0
         }
+        this.callToBack = this.callToBack.bind(this);
+    }
+
+    readDescription(index) {
+        this.setState({
+          showBook: true,
+          showList: false,
+          go:index
+        })
+      }
+
+    callToBack(){
+        this.setState(
+            {
+              showBook: false,
+              showList: true
+            }
+          )
     }
 
     componentDidMount(){
@@ -32,17 +54,57 @@ export default class Content extends React.Component{
      }   
 
     render(){
-        console.log(this.state.toShow)
+        if(this.state.toShow.length>0){
+        const searchResult = this.state.toShow.map((book, i) => {
+            return(
+              <div className="col-md-4" key={i}>
+                <div className="card mt-4">
+                  <div className="card-headercard-title text-center">
+                    <h5>{book.name}</h5>
+                  </div>
+                  <div className="card-body">
+                    <p>{"Autor: " + book.authorName}</p>
+                    <p><mark>{"Paginas: " + book.amountOfPages}</mark></p>
+                    <p><mark>{"Precio: $" + book.priceInPesos}</mark></p>
+                    <div className="card-footer">
+                    <button
+                      className="btn btn-danger"
+                      onClick={this.readDescription.bind(this, i)}>
+                      Ver más!
+                    </button>
+                  </div>
+                  </div>  
+                </div>
+              </div>
+              )
+          })
+          return (
+            <div className="App">
+              <Navigation title = {"Books 3 1/4"} books={this.state.toShow}/>
+                <div className="container">
+                 <div className="row mt-4">
+                    <div className="col-md-3 text-center">
+                    </div>
+                    <div className="col-md-8">
+                      <div className="row">
+                          { this.state.showList && searchResult }
+                        { this.state.showBook && <BookPage back={this.callToBack} book={this.state.toShow[this.state.go]}/> }
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <Footer title = {this.state.title}></Footer>
+            </div>
+          )
+      }
+    else{
         return(
             <div>
-                <h1>Contenido</h1>
-            </div>
+                 <Navigation title = {"Books 3 1/4"} books={this.state.toShow}/>
+                    <h1>No hay nada que mostrar</h1>
+                <Footer title = {this.state.title}></Footer>
+        </div>
         )
-    }
-
+    }}
 }
-//     render(){
-//              return (
-//                this.state.mustBeRender && <Page child={this.state.toShow} id="6"/>
-//              );
-//    }
+
