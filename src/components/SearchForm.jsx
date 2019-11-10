@@ -7,14 +7,17 @@ export default class SearchForm extends React.Component {
     super(props);
     this.state={
       q: '',
+      criteria: '',
       evaluate: false,
       redirect: false
     }
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCriteria = this.handleCriteria.bind(this);
   }
 
   handleSubmit(e) {
+    console.log("HOLAAAA")
     e.preventDefault();
     this.setState({
         evaluate: true
@@ -28,14 +31,22 @@ export default class SearchForm extends React.Component {
    })
 }
 
+  handleCriteria(e){
+    console.log(e.target.value)
+    this.setState({criteria: e.target.value})
+  }
+
 render() {
+  //Esto lo trae bien 
+  console.log(this.state.q)
   if (this.state.redirect){
     window.location.reload();
   }
+  console.log(this.state)
   if (this.state.evaluate && this.state.q !== ''){
-      this.setState({q: '', redirect: true, evaluate: false});
+      this.setState({q: '', criteria: '', redirect: true, evaluate: false});
       return <Redirect to={{pathname: '/content',
-      state:{q : this.state.q }}}/>
+      state:{q : this.state.q , criteria: this.state.criteria}}}/>
       }
   return (
         <div>
@@ -51,7 +62,7 @@ render() {
                           />
                       </div>
                       <div>
-                        <CriteriaDropdown/>
+                        <CriteriaDropdown action={this.handleCriteria}/>
                       </div>
                       <div>
                         <button type="submit" className="btn btn-outline-light">Buscar!</button>
