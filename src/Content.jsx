@@ -1,5 +1,5 @@
 import React from 'react'
-//import {mySearch} from '../../api/api'
+import { findBookbyId, findBookByAuthorName, findBookByName } from './api';
 
 
 export default class Content extends React.Component{
@@ -9,20 +9,27 @@ export default class Content extends React.Component{
         this.state={
             toShow: [],
             mustBeRender:false
-
         }
     }
 
-
     componentDidMount(){
-        const { query } = this.props.location.state
+        const  query  = this.props.location.state.q
+        const  criteria = this.props.location.state.criteria
         console.log(query)
-       // if (query !== ''){
-       //         mySearch(query)
-       //         .then(result => { 
-       //             this.setState({toShow: result, mustBeRender:true})});
-       // }
-    }   
+        console.log(criteria)
+        if (query !== '' && criteria !==''){
+            if(criteria === 'origin' || criteria === 'name'){
+                findBookByName(query).then(result => {this.setState({toShow: result, mustBeRender:true})});
+            }
+            if(criteria === 'author'){
+                findBookByAuthorName(query).then(result => {this.setState({toShow: result, mustBeRender:true})});
+            }
+            if(criteria === 'id'){
+                findBookbyId(query).then(result => {this.setState({toShow: result, mustBeRender:true})});
+                //Y si no es un numero? Contemplar ese caso
+            }
+        }
+     }   
 
     render(){
         return(

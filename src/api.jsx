@@ -10,4 +10,5 @@ export const findBookbyId = body => request('get', 'books/'+ body.id);
 export const books  = body => request('get', 'books/books');
 export const newBook = body => request('post', 'books/new', body);
 export const findBookByName =body => request('get', 'books/name/'+ body.name);
+export const findBookByAuthorName =body => request('get', 'books/name/'+ body.name);
  
