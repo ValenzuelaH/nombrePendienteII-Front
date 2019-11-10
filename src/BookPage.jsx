@@ -3,6 +3,19 @@ import React from 'react';
 import './App.css';
 import './BookPage.css'
 
+const genre = [{"k": "SCIFI" , "v": "Ciencia ficción"}, 
+               {"k": "FANTASTIC", "v": "Fantástico/Épico"},
+               {"k": "TERROR", "v": "Terror"},
+               {"k": "PINKNOVEL", "v": "Novela rosa"},
+               {"k": "THEATER", "v": "Obra de teatro"},
+               {"k": "STORY", "v": "Ficción"},
+               {"k": "DETECTIVESTORY", "v": "Novela negra/Policial"},
+               {"k": "POETRY", "v": "Poesía"},
+               {"k": "DRAMA", "v": "Drama"},
+               {"k": "DYSTOPIAN", "v": "Distópico"},
+               {"k": "ESSAY", "v": "Ensayo"},
+               {"k": "COMEDY", "v": "Comedia"}]
+
 
 class BookPage extends React.Component {
     constructor(props){
