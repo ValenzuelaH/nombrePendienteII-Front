@@ -34,10 +34,15 @@ export default class SearchForm extends React.Component {
   }
 
 render() {
+  if (this.state.redirect){
+    window.location.reload();
+  }
   if (this.state.evaluate && this.state.q !== ''){
+      this.setState({q: '', redirect: true, evaluate: false});
       return <Redirect to={{pathname: '/content',
-      state:{q: this.state.q,
-             criteria: this.state.criteria}}}/>
+      state:{
+        q: this.state.q,
+        criteria: this.state.criteria}}}/>
       }
   return (
         <div>

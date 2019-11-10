@@ -47,7 +47,8 @@ export default class Content extends React.Component{
                 findBookByAuthorName(query).then(result => {this.setState({toShow: result, mustBeRender:true})});
             }
             if(criteria === 'id'){
-                findBookbyId(query).then(result => {this.setState({toShow: result, mustBeRender:true})});
+                const aID = query.parseInt
+                findBookbyId(aID).then(result => {this.setState({toShow: result, mustBeRender:true})});
                 //Y si no es un numero? Contemplar ese caso
             }
         }
