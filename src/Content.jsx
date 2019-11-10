@@ -10,7 +10,7 @@ export default class Content extends React.Component{
         super(props);
         this.state={
             showBook: false,
-            mustBeRender: true,
+            mustBeRender: false,
             toShow: [],
             go: 0
         }
@@ -20,7 +20,7 @@ export default class Content extends React.Component{
     readDescription(index) {
         this.setState({
           showBook: true,
-          showList: false,
+          mustBeRender: false,
           go:index
         })
       }
@@ -29,7 +29,7 @@ export default class Content extends React.Component{
         this.setState(
             {
               showBook: false,
-              showList: true
+              mustBeRender: true
             }
           )
     }
