@@ -1,24 +1,16 @@
 import React from 'react';
 
-var dropDownItems = [ {"code":"0", "name":"Nombre (libro)", "route":"/contact"},
-                      {"code":"2", "name":"Nombre (Autor)"},
-                      {"code":"1", "name":"ID"},
-                      {"code":"3", "name":"Género"}
-                    ]
-
 class CriteriaDropdown extends React.Component{
     render(){
         return(
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i>-- Seleccione un criterio --</i> 
-            </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button class="dropdown-item" type="button">       Nombre <i>(libro)</i></button>
-                    <button class="dropdown-item" type="button">       Nombre <i>(Autor)</i></button>
-                    <button class="dropdown-item" type="button">       ID</button>
-                    <button class="dropdown-item" type="button">       Género</button>
-                 </div>
+            <div>
+                <select className ="btn btn-secondary dropdown-toggle"type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <option selected value="origin">    -- Seleccione un criterio --</option>
+                    <option value="name">               Nombre (libro)</option>
+                    <option value="author">             Nombre (autor)</option>
+                    <option value="id">                 ID</option>
+                    <option value="genre">              Género</option>
+                </select>
             </div>
        )}
 }
