@@ -10,7 +10,7 @@ export default class Content extends React.Component{
         super(props);
         this.state={
             showBook: false,
-            showList: true,
+            mustBeRender: true,
             toShow: [],
             go: 0
         }
@@ -34,12 +34,14 @@ export default class Content extends React.Component{
           )
     }
 
-    componentDidMount(){
+    componentWillMount(){
         const  query  = this.props.location.state.q
         const  criteria = this.props.location.state.criteria
           if (query !== '' && criteria !==''){
             if(criteria === 'origin' || criteria === 'name'){
-                findBookByName(query).then(result => {this.setState({toShow: result, mustBeRender:true})});
+                console.log("ACAAAA")
+                console.log(query)
+                findBookByName(query).then(result => {this.setState({toShow: [result], mustBeRender:true})});
             }
             if(criteria === 'author'){
                 findBookByAuthorName(query).then(result => {this.setState({toShow: result, mustBeRender:true})});
@@ -47,7 +49,7 @@ export default class Content extends React.Component{
             if(criteria === 'id'){
                 const aID = query.parseInt
                 console.log(typeof(aID))
-                findBookbyId(aID).then(result => {this.setState({toShow: result, mustBeRender:true})});
+                findBookbyId(aID).then(result => {this.setState({toShow: [result], mustBeRender:true})});
                 //Y si no es un numero? Contemplar ese caso
             }
         }
@@ -80,14 +82,14 @@ export default class Content extends React.Component{
           })
           return (
             <div className="App">
-              <Navigation title = {"Books 3 1/4"} books={this.state.toShow}/>
+              <Navigation title = {"Books 3 1/4"} books={this.state.toShow} fromComponent="/content"/>
                 <div className="container">
                  <div className="row mt-4">
                     <div className="col-md-3 text-center">
                     </div>
                     <div className="col-md-8">
                       <div className="row">
-                          { this.state.showList && searchResult }
+                          { this.state.mustBeRender && searchResult }
                         { this.state.showBook && <BookPage back={this.callToBack} book={this.state.toShow[this.state.go]}/> }
                       </div>
                   </div>
