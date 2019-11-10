@@ -32,6 +32,7 @@ export default class Content extends React.Component{
      }   
 
     render(){
+        console.log(this.state.toShow)
         return(
             <div>
                 <h1>Contenido</h1>
