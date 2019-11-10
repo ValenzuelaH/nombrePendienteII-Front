@@ -14,7 +14,7 @@ class CriteriaDropdown extends React.Component{
                     <i>-- Seleccione un criterio --</i> 
             </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button class="dropdown-item active" type="button">       Nombre <i>(libro)</i></button>
+                    <button class="dropdown-item" type="button">       Nombre <i>(libro)</i></button>
                     <button class="dropdown-item" type="button">       Nombre <i>(Autor)</i></button>
                     <button class="dropdown-item" type="button">       ID</button>
                     <button class="dropdown-item" type="button">       Género</button>
