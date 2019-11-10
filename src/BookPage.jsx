@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 import './BookPage.css'
 
-const genre = [{"k": "SCIFI" , "v": "Ciencia ficción"}, 
+const genres = [{"k": "SCIFI" , "v": "Ciencia ficción"}, 
                {"k": "FANTASTIC", "v": "Fantástico/Épico"},
                {"k": "TERROR", "v": "Terror"},
                {"k": "PINKNOVEL", "v": "Novela rosa"},
@@ -38,7 +38,7 @@ class BookPage extends React.Component {
                 <div> Páginas: {this.props.book.amountOfPages} </div>
                 <div> Año de edición: {this.props.book.releaseYear} </div>
                 <div> Autor: {this.props.book.authorName} </div>
-                <div> Género: {this.props.book.genre} </div>
+                <div> Género: {genres.find(genre => genre.k === this.props.book.genre).v} </div>
                 <div id = "money"> Precio: $ {this.props.book.priceInPesos} </div>
                 <div>
         <button id="botton-back" type="button" class="btn btn-primary" onClick={this.props.back}>Atrás</button>
