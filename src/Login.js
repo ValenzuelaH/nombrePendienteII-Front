@@ -24,7 +24,7 @@ export default class Login extends React.Component{
                     <div className="Password-container">
                         Password:
                     </div>
-                    <div className="Flex-container">
+                    <div >
                         <input type="text" className="UserNameText-Container" placeholder="Your password"/>
                     </div>
                     <div className="Button-Container">
