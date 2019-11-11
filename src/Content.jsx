@@ -6,6 +6,16 @@ import Footer from './Footer';
 
 import Header from './Header';
 
+class  NoResult extends React.Component{
+  render(){
+    return(
+        <div>
+          <h1>No hay nada que mostrar</h1>
+        </div>
+    )
+  }
+}
+
 export default class Content extends React.Component{
 
     constructor(props){
@@ -53,8 +63,7 @@ export default class Content extends React.Component{
      }   
 
     render(){
-      //  <Header title = {"Books 3 1/4"}></Header>
-        if(this.state.toShow.length>0){
+      const title = "Books 3 1/4";  
         const searchResult = this.state.toShow.map((book, i) => {
             return(
               <div className="col-md-4" key={i}>
@@ -80,6 +89,7 @@ export default class Content extends React.Component{
           })
           return (
             <div className="App">
+              <Header title = {title}></Header>
               <Navigation title = {"Books 3/4"} books={this.state.toShow} fromComponent="/content"/>
                 <div className="container">
                  <div className="row mt-4">
@@ -87,7 +97,7 @@ export default class Content extends React.Component{
                     </div>
                     <div className="col-md-8">
                       <div className="row">
-                          { this.state.mustBeRender && searchResult }
+                          { this.state.mustBeRender && searchResult || <NoResult />}
                         { this.state.showBook && <BookPage back={this.callToBack} book={this.state.toShow[this.state.go]}/> }
                       </div>
                   </div>
@@ -97,14 +107,7 @@ export default class Content extends React.Component{
             </div>
           )
       }
-    else{
-        return(
-            <div>
-                 <Navigation title = {"Books 3 1/4"} books={this.state.toShow}/>
-                    <h1>No hay nada que mostrar</h1>
-                <Footer title = {this.state.title}></Footer>
-        </div>
-        )
-    }}
 }
+
+
 
