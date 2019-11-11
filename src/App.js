@@ -12,7 +12,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       Books,
-      title: "Books 3 1/4",
+      title: "Books 3/4",
       showList: true,
       showBook: false,
       go:1

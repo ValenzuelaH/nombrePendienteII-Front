@@ -8,12 +8,12 @@ import './App.css';
 
 class AboutUs extends React.Component{
     render(){
-        const title = "Books 3 1/4"
+        const title = "Books 3/4"
 
         return(
             <React.Fragment>
                 <Header title = {title}></Header>
-                {/* <Navigation title = {this.title} books={Books} fromComponent="/about_us"/> */}
+                 <Navigation title = {title} books={Books} fromComponent="/about_us"/>
                 <body className="aboutUs">
                     <div class="container">
                             <h1 class="title-aboutus">Nuestra misión es: Proveer de buena lectura y accesible, tanto a los fanáticos del formato físico, como a los del digital.</h1>
