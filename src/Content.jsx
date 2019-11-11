@@ -4,6 +4,8 @@ import Navigation from './components/Navigation';
 import BookPage from './BookPage';
 import Footer from './Footer';
 
+import Header from './Header';
+
 export default class Content extends React.Component{
 
     constructor(props){
@@ -51,6 +53,7 @@ export default class Content extends React.Component{
      }   
 
     render(){
+      //  <Header title = {"Books 3 1/4"}></Header>
         if(this.state.toShow.length>0){
         const searchResult = this.state.toShow.map((book, i) => {
             return(
@@ -77,7 +80,7 @@ export default class Content extends React.Component{
           })
           return (
             <div className="App">
-              <Navigation title = {"Books 3 1/4"} books={this.state.toShow} fromComponent="/content"/>
+              <Navigation title = {"Books 3/4"} books={this.state.toShow} fromComponent="/content"/>
                 <div className="container">
                  <div className="row mt-4">
                     <div className="col-md-3 text-center">

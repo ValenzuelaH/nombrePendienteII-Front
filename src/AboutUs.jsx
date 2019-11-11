@@ -8,7 +8,7 @@ import './App.css';
 
 class AboutUs extends React.Component{
     render(){
-        const title = "Books 3 1/4"
+        const title = "Books 3/4"
 
         return(
             <React.Fragment>
