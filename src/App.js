@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Books } from './Books.json';
 import Navigation from './components/Navigation';
 import Footer from './Footer';
 import BookPage from './BookPage';
-
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -37,6 +37,7 @@ class App extends React.Component {
   }
 
   handleAddBook(book) {
+    
     this.setState({
       Books: [...this.state.Books, book]
     })
@@ -70,7 +71,7 @@ class App extends React.Component {
 
     return (
         <div className="App">
-          <Navigation title = {this.state.title} books={this.state.Books}/>
+          <Navigation title = {this.state.title} books={this.state.Books} fromComponent="/home"/>
             <div className="container">
              <div className="row mt-4">
                 <div className="col-md-3 text-center">

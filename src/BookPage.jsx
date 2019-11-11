@@ -3,6 +3,19 @@ import React from 'react';
 import './App.css';
 import './BookPage.css'
 
+const genres = [{"k": "SCIFI" , "v": "Ciencia ficción"}, 
+               {"k": "FANTASTIC", "v": "Fantástico/Épico"},
+               {"k": "TERROR", "v": "Terror"},
+               {"k": "PINKNOVEL", "v": "Novela rosa"},
+               {"k": "THEATER", "v": "Obra de teatro"},
+               {"k": "STORY", "v": "Ficción"},
+               {"k": "DETECTIVESTORY", "v": "Novela negra/Policial"},
+               {"k": "POETRY", "v": "Poesía"},
+               {"k": "DRAMA", "v": "Drama"},
+               {"k": "DYSTOPIAN", "v": "Distópico"},
+               {"k": "ESSAY", "v": "Ensayo"},
+               {"k": "COMEDY", "v": "Comedia"}]
+
 
 class BookPage extends React.Component {
     constructor(props){
@@ -25,6 +38,7 @@ class BookPage extends React.Component {
                 <div> Páginas: {this.props.book.amountOfPages} </div>
                 <div> Año de edición: {this.props.book.releaseYear} </div>
                 <div> Autor: {this.props.book.authorName} </div>
+                <div> Género: {genres.find(genre => genre.k === this.props.book.genre).v} </div>
                 <div id = "money"> Precio: $ {this.props.book.priceInPesos} </div>
                 <div>
         <button id="botton-back" type="button" class="btn btn-primary" onClick={this.props.back}>Atrás</button>
