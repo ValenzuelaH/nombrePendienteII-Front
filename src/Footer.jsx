@@ -6,7 +6,7 @@ class Footer extends React.Component{
       return(
         <React.Fragment>
         <footer className="footer-distributed">
-
+          
           <div className="footer-right">
     
             <a href="https://www.facebook.com"><i className="fa fa-facebook"></i></a>
@@ -25,7 +25,7 @@ class Footer extends React.Component{
     
               <a href="#">Pricing</a> */}
     
-              <a href="/">Quienes Somos</a>
+              <a href="/about_us">Quienes Somos</a>
     
               {/* <a href="#">Faq</a>
     

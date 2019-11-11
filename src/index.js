@@ -9,8 +9,9 @@ import Router from './Router';
 import * as serviceWorker from './serviceWorker';
 import Login from "./Login";
 import SwircherLogInRegister from "./SwitcherLogInRegister";
+import Prueba from './Prueba';
 
-ReactDOM.render(<SwircherLogInRegister />, document.getElementById('root'));
+ReactDOM.render(<Router />, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change

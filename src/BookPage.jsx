@@ -2,6 +2,8 @@ import React from 'react';
 //import { findBookbyId } from './api';
 import './App.css';
 import './BookPage.css'
+import Footer from './Footer';
+import { element } from 'prop-types';
 
 const genres = [{"k": "SCIFI" , "v": "Ciencia ficción"}, 
                {"k": "FANTASTIC", "v": "Fantástico/Épico"},
