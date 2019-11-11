@@ -5,8 +5,10 @@ import './index.css';
 import App from './App';
 import Register from './Register'
 import * as serviceWorker from './serviceWorker';
+import Login from "./Login";
+import SwircherLogInRegister from "./SwitcherLogInRegister";
 
-ReactDOM.render(<Register/>, document.getElementById('root'));
+ReactDOM.render(<SwircherLogInRegister />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

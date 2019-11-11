@@ -46,7 +46,7 @@ export default class Register extends React.Component{
                         <button>Send</button>
                     </div>
                     <div className="CancelButton-container">
-                        <button>Cancel</button>
+                        <button onClick={this.props.changeLogin}>Cancel</button>
                     </div>
                 </div>
             </div>
