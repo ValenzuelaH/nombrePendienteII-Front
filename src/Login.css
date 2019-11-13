@@ -72,3 +72,9 @@
     color: #ffffff;
     background-color: #127bca;
 }
+.Error-Container{
+    margin-top: 20px;
+    margin-left: 120px;
+    font-size: 20px;
+    color: red;
+}

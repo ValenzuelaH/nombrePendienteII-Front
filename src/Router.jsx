@@ -6,6 +6,7 @@ import App from './App';
 import Prueba from './Prueba';
 import Content from './Content';
 import AboutUs from './AboutUs';
+import SwitcherLogInRegister from "./SwitcherLogInRegister";
 
 export default class Router extends React.Component {
   render() {
@@ -16,7 +17,7 @@ export default class Router extends React.Component {
             <Route exact path="/about_us" component={AboutUs} />
             <Route exact path="/contact" component={Prueba} />
             <Route exact path="/user" component={Prueba} />
-            <Route exact path="/" component={App} />
+            <Route exact path="/" render={ props => <SwitcherLogInRegister {...props} /> } />
           </Switch>
       </BrowserRouter>
     );
