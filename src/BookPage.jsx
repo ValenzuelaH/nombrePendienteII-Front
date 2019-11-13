@@ -23,7 +23,6 @@ class BookPage extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            //bookId = props.id
         }
     }
 
@@ -47,11 +46,11 @@ class BookPage extends React.Component {
         </div>
             </div>
 
-            {/*<div className="footer">
+            <div className="footer">
                 Have you read this book? Do you like it?
                     <button type="button" className="Accept-Button">I Love this Book!</button>
                     <button type="button" className="Cancel-Button">I prefer the movie</button>
-            </div>*/}
+            </div>
         </div>
         </div>
       )

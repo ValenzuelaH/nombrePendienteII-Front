@@ -12,4 +12,5 @@ export const newBook = body => request('post', 'books/new', body);
 export const findBookByName = body => request('get', 'name/'+ body);
 export const findBookByAuthorName = body => request('get', 'author/'+ body);
 export const login = body => request('post', 'app/login', body);
+export const register = body => request('post', 'app/register', body);
  

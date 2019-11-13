@@ -28,7 +28,7 @@ export default class SwircherLogInRegister extends React.Component{
         return(
                 <div>
                     {this.state.showLogin && <Login changeRegister = {this.changeRegister} history = {this.props.history}/>}
-                    {this.state.showRegister && <Register changeLogin = {this.changeLogIn} />}
+                    {this.state.showRegister && <Register changeLogin = {this.changeLogIn} history = {this.props.history} />}
                 </div>
         )
     }
