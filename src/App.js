@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Books } from './Books.json';
+import {allbooks} from "./api";
 import Navigation from './components/Navigation';
 import Footer from './Footer';
 import BookPage from './BookPage';
@@ -12,6 +13,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       Books,
+        books: [],
       title: "Books 3/4",
       showList: true,
       showBook: false,
@@ -19,9 +21,19 @@ class App extends React.Component {
     };
     this.handleAddBook = this.handleAddBook.bind(this);
     this.callToBack = this.callToBack.bind(this);
+    this.setBooks = this.setBooks.bind(this);
   }
 
-  callToBack(){
+  componentDidMount() {
+      allbooks({}).then(res => this.setBooks(res));
+  }
+
+    setBooks(allBooks){
+        this.setState({
+            books: allBooks
+        })
+    }
+    callToBack(){
     this.setState(
       {
         showBook: false,
@@ -47,7 +59,7 @@ class App extends React.Component {
 
   render(){
 
-    const myBooks = this.state.Books.map((book, i) => {
+    const myBooks = this.state.books.map((book, i) => {
       return(
         <div className="col-md-4" key={i}>
           <div className="card mt-4">
@@ -87,7 +99,7 @@ class App extends React.Component {
               </div>
             </div>
           </div>
-          <Footer title = {this.state.title}></Footer>
+            { this.state.showList && <Footer title = {this.state.title}></Footer> }
         </div>
       )
   }

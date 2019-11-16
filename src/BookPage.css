@@ -1,26 +1,31 @@
 .Book-Container {
     align-items: center;
+    text-align: left;
 
 }
 
 .Book-name{
-    font-size: 55px;
+    font-size: 76px;
     color: white;
     width: 70%;
-    border-bottom: aqua solid 2px;
-    border-radius: 5px;
     white-space: nowrap;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 #money{
-    color: #999388;
+    color: #f2c27a;
+    margin-top: 20px;
 }
-
+#autor{
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #bfbfbf;
+}
 .Info-Container{
     font-size: 33px;
     justify-content: left;
     width: auto;
-    color: navajowhite;
+    color: #bebebe;
 }
 
 .children {
@@ -28,7 +33,7 @@
     margin-bottom: 20px;
 
 }
-/*
+
 .Accept-Button{
     background-color: #4CAF50;
     border-radius: 2px;
@@ -48,4 +53,4 @@
     background-color: firebrick;
     color: white;
     text-align: center;
-}*/
+}

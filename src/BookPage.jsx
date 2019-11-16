@@ -1,9 +1,8 @@
 import React from 'react';
-//import { findBookbyId } from './api';
 import './App.css';
 import './BookPage.css'
-import Footer from './Footer';
-import { element } from 'prop-types';
+import {upvote} from "./api";
+import {downvote} from "./api";
 
 const genres = [{"k": "SCIFI" , "v": "Ciencia ficción"}, 
                {"k": "FANTASTIC", "v": "Fantástico/Épico"},
@@ -24,8 +23,17 @@ class BookPage extends React.Component {
         super(props);
         this.state = {
         }
+
+        this.upvote = this.upvote.bind(this);
+        this.downvote = this.downvote.bind(this);
     }
 
+    upvote(){
+        upvote({id: 1}).then(res => console.log(res))
+    }
+    downvote(){
+        downvote({id: 1}).then(res => console.log(res))
+    }
 
   render(){
      return (
@@ -36,11 +44,11 @@ class BookPage extends React.Component {
                {this.props.book.name}
             </div>
             <div className="Info-Container">
-                <div> Páginas: {this.props.book.amountOfPages} </div>
-                <div> Año de edición: {this.props.book.releaseYear} </div>
-                <div> Autor: {this.props.book.authorName} </div>
-                <div> Género: {genres.find(genre => genre.k === this.props.book.genre).v} </div>
-                <div id = "money"> Precio: $ {this.props.book.priceInPesos} </div>
+                <div id  = "autor"> {this.props.book.authorName} </div>
+                <div> Edición {this.props.book.releaseYear} </div>
+                <div> {genres.find(genre => genre.k === this.props.book.genre).v} </div>
+                <div> {this.props.book.amountOfPages} páginas </div>
+                <div id = "money"> ${this.props.book.priceInPesos} </div>
                 <div>
         <button id="botton-back" type="button" class="btn btn-primary" onClick={this.props.back}>Atrás</button>
         </div>
@@ -48,8 +56,8 @@ class BookPage extends React.Component {
 
             <div className="footer">
                 Have you read this book? Do you like it?
-                    <button type="button" className="Accept-Button">I Love this Book!</button>
-                    <button type="button" className="Cancel-Button">I prefer the movie</button>
+                    <button type="button" className="Accept-Button" onClick={this.upvote}>I Love this Book!</button>
+                    <button type="button" className="Cancel-Button" onClick={this.downvote}>I prefer the movie</button>
             </div>
         </div>
         </div>
