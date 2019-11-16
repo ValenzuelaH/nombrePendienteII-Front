@@ -31,7 +31,7 @@ export default class Login extends React.Component{
     }
 
     goToMainPage(){
-        this.props.history.push("/main_page")
+        this.props.history.push("/app")
     }
     showError(){
         this.setState({errormessage: "Usuario o contraseña incorrecta"})

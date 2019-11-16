@@ -27,10 +27,10 @@ export default class Register extends React.Component{
         const birth = this.state.birthdate;
         const password = this.state.password;
         register({
-            "name": "a",
-            "email": "alfredito_69@gmail",
-            "birth": "2019-10-15",
-            "password": "a"
+            "name": name,
+            "email": email,
+            "birth": birth,
+            "password": password
         }).then(res => this.handleResponse(res))
     }
 
@@ -40,7 +40,7 @@ export default class Register extends React.Component{
         if(response == 200){
             console.log("asd")
             console.log(this.props.history);
-            this.props.history.pop()
+            this.props.history.push("/app")
         }else{
             this.setState({errormessage: "Error al registrar, llene el formulario de nuevo porfavor"})
         }
