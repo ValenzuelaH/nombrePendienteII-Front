@@ -35,6 +35,8 @@
 }
 
 .Accept-Button{
+    margin-left: 12px;
+    margin-right: 12px;
     background-color: #4CAF50;
     border-radius: 2px;
 }

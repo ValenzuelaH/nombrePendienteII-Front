@@ -94,7 +94,7 @@ class App extends React.Component {
                 <div className="col-md-8">
                   <div className="row">
                       { this.state.showList && myBooks }
-                    { this.state.showBook && <BookPage back={this.callToBack} book={this.state.Books[this.state.go]}/> }
+                    { this.state.showBook && <BookPage back={this.callToBack} book={this.state.books[this.state.go]}/> }
                   </div>
               </div>
             </div>

@@ -4,35 +4,23 @@ import './BookPage.css'
 import {upvote} from "./api";
 import {downvote} from "./api";
 
-const genres = [{"k": "SCIFI" , "v": "Ciencia ficción"}, 
-               {"k": "FANTASTIC", "v": "Fantástico/Épico"},
-               {"k": "TERROR", "v": "Terror"},
-               {"k": "PINKNOVEL", "v": "Novela rosa"},
-               {"k": "THEATER", "v": "Obra de teatro"},
-               {"k": "STORY", "v": "Ficción"},
-               {"k": "DETECTIVESTORY", "v": "Novela negra/Policial"},
-               {"k": "POETRY", "v": "Poesía"},
-               {"k": "DRAMA", "v": "Drama"},
-               {"k": "DYSTOPIAN", "v": "Distópico"},
-               {"k": "ESSAY", "v": "Ensayo"},
-               {"k": "COMEDY", "v": "Comedia"}]
-
-
 class BookPage extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-        }
+        };
 
         this.upvote = this.upvote.bind(this);
         this.downvote = this.downvote.bind(this);
     }
 
     upvote(){
-        upvote({id: 1}).then(res => console.log(res))
+        const idBook = this.props.book.id;
+        upvote({id: idBook}).then(res => console.log(res))
     }
     downvote(){
-        downvote({id: 1}).then(res => console.log(res))
+        const idBook = this.props.book.id;
+        downvote({id: idBook}).then(res => console.log(res))
     }
 
   render(){
@@ -46,8 +34,9 @@ class BookPage extends React.Component {
             <div className="Info-Container">
                 <div id  = "autor"> {this.props.book.authorName} </div>
                 <div> Edición {this.props.book.releaseYear} </div>
-                <div> {genres.find(genre => genre.k === this.props.book.genre).v} </div>
+                <div>  {this.props.book.genre} </div>
                 <div> {this.props.book.amountOfPages} páginas </div>
+                <div> Votos {this.props.book.votes} </div>
                 <div id = "money"> ${this.props.book.priceInPesos} </div>
                 <div>
         <button id="botton-back" type="button" class="btn btn-primary" onClick={this.props.back}>Atrás</button>
@@ -55,9 +44,9 @@ class BookPage extends React.Component {
             </div>
 
             <div className="footer">
-                Have you read this book? Do you like it?
-                    <button type="button" className="Accept-Button" onClick={this.upvote}>I Love this Book!</button>
-                    <button type="button" className="Cancel-Button" onClick={this.downvote}>I prefer the movie</button>
+                ¿Ya lo leiste?
+                    <button type="button" className="Accept-Button" onClick={this.upvote}>Si, esta buenardo!</button>
+                    <button type="button" className="Cancel-Button" onClick={this.downvote}>Prefiero la peli</button>
             </div>
         </div>
         </div>
