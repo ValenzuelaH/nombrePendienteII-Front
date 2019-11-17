@@ -19,7 +19,7 @@ class Footer extends React.Component{
           <div className="footer-left">
     
             <p className="footer-links">
-              <a className="link-1" href="/">Inicio</a>
+              <a className="link-1" href="/app">Inicio</a>
     
               {/* <a href="#">Blog</a>
     

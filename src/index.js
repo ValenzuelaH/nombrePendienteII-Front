@@ -2,14 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './index.css';
-import App from './App';
-import Navigation from './components/Navigation';
-import Register from './Register'
 import Router from './Router'; 
 import * as serviceWorker from './serviceWorker';
-import Login from "./Login";
-import SwircherLogInRegister from "./SwitcherLogInRegister";
-import Prueba from './Prueba';
 
 ReactDOM.render(<Router />, document.getElementById('root'));
 

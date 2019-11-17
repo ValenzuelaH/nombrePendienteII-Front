@@ -86,7 +86,7 @@ class App extends React.Component {
     return (
         <div className="App">
           <Header title = {this.state.title}></Header>
-          <Navigation title = {this.state.title} books={this.state.Books} fromComponent="/home"/>
+          <Navigation title = {this.state.title} books={this.state.books} fromComponent="/home"/>
             <div className="container">
              <div className="row mt-4">
                 <div className="col-md-3 text-center">
