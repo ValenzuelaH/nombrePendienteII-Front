@@ -45,13 +45,13 @@ export default class Content extends React.Component{
             }
           )
     }
-
+    
     componentWillMount(){
         const  query  = this.props.location.state.q
         const  criteria = this.props.location.state.criteria
           if (query !== '' && criteria !==''){
             if(criteria === 'origin' || criteria === 'name'){
-                findBookByName(query).then(result => {result === null && this.setState({toShow: [result], mustBeRender:true})});
+                findBookByName(query).then(result => {result !== null && this.setState({toShow: [result], mustBeRender:true})});
             }
             if(criteria === 'author'){
                 findBookByAuthorName(query).then(result => {this.setState({toShow: result, mustBeRender:true})});
