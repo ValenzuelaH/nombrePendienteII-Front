@@ -45,6 +45,9 @@
     border-radius: 2px;
 
 }
+#botton-wishlist {
+    margin-left: 20px;
+}
 .footer{
     margin-top: 20px;
     position: fixed;

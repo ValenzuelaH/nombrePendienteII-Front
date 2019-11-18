@@ -3,6 +3,7 @@ import './App.css';
 import './BookPage.css'
 import {upvote} from "./api";
 import {downvote} from "./api";
+import {agregarADeseados } from "./api";
 
 class BookPage extends React.Component {
     constructor(props){
@@ -12,6 +13,7 @@ class BookPage extends React.Component {
 
         this.upvote = this.upvote.bind(this);
         this.downvote = this.downvote.bind(this);
+        this.addToWishList = this.addToWishList.bind(this);
     }
 
     upvote(){
@@ -21,6 +23,17 @@ class BookPage extends React.Component {
     downvote(){
         const idBook = this.props.book.id;
         downvote({id: idBook}).then(res => console.log(res))
+    }
+
+    addToWishList(){
+        console.log(localStorage.getItem('user'));
+        console.log(this.props.book.name);
+        const username = localStorage.getItem('user');
+        const bookname = this.props.book.name;
+        agregarADeseados({
+            username: username,
+            bookName: bookname
+        }).then(res => console.log(res));
     }
 
   render(){
@@ -39,7 +52,8 @@ class BookPage extends React.Component {
                 <div> Votos {this.props.book.votes} </div>
                 <div id = "money"> ${this.props.book.priceInPesos} </div>
                 <div>
-        <button id="botton-back" type="button" class="btn btn-primary" onClick={this.props.back}>Atrás</button>
+                    <button id="botton-back" type="button" class="btn btn-primary" onClick={this.props.back}>Atrás</button>
+                    <button id="botton-wishlist" type="button" class="btn btn-primary" onClick={this.addToWishList}>Agregar a deseados</button>
         </div>
             </div>
 

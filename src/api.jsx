@@ -14,4 +14,5 @@ export const login = body => request('post', 'app/login', body);
 export const register = body => request('post', 'app/register', body);
 export const upvote = body => request('get', '/upvote/' + body.id);
 export const downvote = body => request('get', '/downvote/' + body.id);
+export const agregarADeseados = body => request('post', 'app/addToWishlist', body);
  
