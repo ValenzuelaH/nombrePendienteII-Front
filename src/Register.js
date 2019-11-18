@@ -35,15 +35,10 @@ export default class Register extends React.Component{
     }
 
     handleResponse(response){
-        console.log(typeof  response)
-        console.log(response)
-        if(response == 200){
-            console.log("asd")
-            console.log(this.props.history);
-            this.props.history.push("/app")
-        }else{
-            this.setState({errormessage: "Error al registrar, llene el formulario de nuevo porfavor"})
-        }
+        localStorage.setItem('user', response.userName);
+        this.props.history.push("/app")
+        //this.setState({errormessage: "Error al registrar, llene el formulario de nuevo porfavor"})
+
     }
     setName(event){
         this.setState({name: event.target.value})

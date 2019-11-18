@@ -38,6 +38,7 @@ export default class Login extends React.Component{
     }
     handleResponse(res){
         if(res){
+            localStorage.setItem('user', this.state.userName);
             this.goToMainPage()
         }else{
             this.showError()
