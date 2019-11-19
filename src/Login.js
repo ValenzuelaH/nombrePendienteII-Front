@@ -60,7 +60,7 @@ export default class Login extends React.Component{
                         Password:
                     </div>
                     <div >
-                        <input type="text" className="UserNameText-Container" placeholder="Your password" onChange={this.handlePassword}/>
+                        <input type="password" className="UserNameText-Container" placeholder="Your password" onChange={this.handlePassword}/>
                     </div>
                     <div className="Button-Container">
                         <div><button type="button" className="LogInButton" onClick={this.checkLogIn}>

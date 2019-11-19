@@ -82,7 +82,7 @@ export default class Register extends React.Component{
                     Password:
                 </div>
                 <div>
-                    <input type="text" className="Generic-Input" onChange={this.setpassword}/>
+                    <input type="password" className="Generic-Input" onChange={this.setpassword}/>
                 </div>
                 <div className="Button-container">
                     <div className="SendButton-container">
