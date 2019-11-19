@@ -1,0 +1,19 @@
+.user-container{
+    margin-top: 170px;
+    margin-left: 440px;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid #127bca;
+    width: 320px;
+}
+
+.user-name{
+    margin-left: 12px;
+    font-size: 30px;
+    text-align: left;
+}
+
+.info-container{
+    text-align: center;
+
+}
