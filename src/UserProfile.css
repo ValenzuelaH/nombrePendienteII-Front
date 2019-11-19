@@ -15,5 +15,9 @@
 
 .info-container{
     text-align: center;
+}
 
+.button{
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
