@@ -3,6 +3,10 @@
     text-align: left;
 }
 
+.noMargin {
+  margin: 0px;
+}
+
 .trigger {
 	cursor: pointer;
 	display: inline-block;

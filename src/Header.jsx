@@ -47,6 +47,7 @@ class Header extends React.Component{
               Desloguear
             </div>
           </a>
+          <hr className="noMargin"></hr>
           <a href="/user" className="item">
             <div className="item-wrapper" onMouseDown={(e) => { e.preventDefault(); }}>
               Mi Perfil
