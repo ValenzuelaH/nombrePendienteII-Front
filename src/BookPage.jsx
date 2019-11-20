@@ -80,7 +80,7 @@ class BookPage extends React.Component {
             </div>
         </div>
 
-        <ListOpinion bybook={this.props.book.id}/>
+        <ListOpinion bybook={this.props.book}/>
         <div className="last">
             <Footer/>
         </div>

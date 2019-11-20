@@ -22,7 +22,7 @@ class ListOpinion extends React.Component{
     }
 
     componentDidMount() {
-        findAllOpinionsForABook(this.props.bybook).then(res => this.setOpinions(res));
+        findAllOpinionsForABook(this.props.bybook.id).then(res => this.setOpinions(res));
     }
   
     setOpinions(allOpinion){
@@ -34,6 +34,7 @@ class ListOpinion extends React.Component{
     }
 
     handleAddOpinion(opinion) {
+        console.log("LISTOPINION") 
         this.setState({
           opinions: [...this.state.opinions, opinion]
         })
@@ -118,7 +119,7 @@ class ListOpinion extends React.Component{
             <div className="App">
                 <div className="container">
                         <br></br><br></br>
-                        {<OpinionForm onClick={this.handleAddOpinion.bind(this)}/>}
+                        {<OpinionForm book={this.props.bybook} onClick={this.handleAddOpinion.bind(this)}/>}
                         <br></br><br></br>
                         {this.state.noResult && <NoResultOpinion/>}
                         <br></br><br></br>
