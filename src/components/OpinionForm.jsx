@@ -15,8 +15,8 @@ export default class OpinionForm extends React.Component {
   }
 
   handleSubmit(e) {
+    e.preventDefault();
     if(!this.state.message.trim() == '' ){
-      e.preventDefault();
       console.log("Se va a handlear la Opinion")
       const pseudo_opinion = {
         "msj":this.state.message,
@@ -59,11 +59,11 @@ export default class OpinionForm extends React.Component {
                 {"Nos interesa saber que pensas"} 
               </div>
               <div className="card-body">
-                <blockquote className="blockquote mb-0">
-                  <p><cite><textarea rows="4" cols="4" maxLength="200" className="form-control mr-sm-2" type="text" value ={this.state.message} name="message" onChange={this.handleInput} placeholder="Ingrese su opinión aqui" aria-label="Texto opinion"></textarea></cite></p>
+                {/* <blockquote className="blockquote mb-0"> */}
+                  <p><textarea rows="4" cols="4" maxLength="200" className="form-control mr-sm-2" type="text" value ={this.state.message} name="message" onChange={this.handleInput} placeholder="Ingrese su opinión aqui" aria-label="Texto opinion"></textarea></p>
                   <button type="submit" value="submit" className="btn btn-outline-primary izq">Enviar</button>
                   <button type="reset" value="reset" className="btn btn-outline-danger der" onClick={this.deleteInput}>X</button>
-                </blockquote>
+                {/* </blockquote> */}
               </div>
             </div>
           </div>  

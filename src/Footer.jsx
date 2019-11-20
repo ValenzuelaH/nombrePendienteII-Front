@@ -27,9 +27,9 @@ class Footer extends React.Component{
     
               <a href="/about_us">Quienes Somos</a>
     
-            /* <a href="#">Faq</a>
+              <a href="#">Faq</a>
     
-              <a href="#">Contact</a> 
+              <a href="/contact">Contact</a> 
             </p>
     
             <p>{this.props.title} &copy; 2019</p>

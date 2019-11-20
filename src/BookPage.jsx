@@ -4,7 +4,6 @@ import './BookPage.css'
 import {upvote} from "./api";
 import {downvote} from "./api";
 import {agregarADeseados } from "./api";
-import Footer from './Footer';
 import ListOpinion from './components/ListOpinion';
 
 const genres = [{"k": "SCIFI" , "v": "Ciencia ficción"}, 
@@ -82,7 +81,6 @@ class BookPage extends React.Component {
 
         <ListOpinion bybook={this.props.book}/>
         <div className="last">
-            <Footer/>
         </div>
         </div>
       )
