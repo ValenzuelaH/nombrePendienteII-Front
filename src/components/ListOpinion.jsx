@@ -1,6 +1,6 @@
 import React from 'react';
 import OpinionCard from './OpinionCard';
-import {ReactComponent} from 'react';
+import {findAllOpinionsForABook} from '../api';
 
 class ListOpinion extends React.Component{
     constructor(props) {
@@ -14,6 +14,17 @@ class ListOpinion extends React.Component{
         this.deleteOpinion = this.deleteOpinion.bind(this);
         this.editOpinion = this.editOpinion.bind(this);
         this.handleSendClick = this.handleSendClick.bind(this);
+        this.setOpinions = this.setOpinions.bind(this);
+    }
+
+    componentDidMount() {
+        findAllOpinionsForABook(this.props.bybook).then(res => this.setOpinions(res));
+    }
+  
+    setOpinions(allOpinion){
+        this.setState({
+            opinions: allOpinion
+        })
     }
 
     handleInputChange(e) {
@@ -82,13 +93,12 @@ class ListOpinion extends React.Component{
     }
     
     render(){
-        let opinion = undefined;
-
 
         const myOpinions = this.state.opinions.map((opinion, i) => {
             return(
-              <div className="col-md-4" key={i}>
-                <OpinionCard opinion={opinion}/>
+              <div key={i}>
+                  
+                <OpinionCard opinion={opinion} key={i} style={{}}opinion={opinion}/>
               </div>
               )
           })
@@ -96,10 +106,10 @@ class ListOpinion extends React.Component{
           return (
             <div className="App">
                 <div className="container">
-                        { this.state.showList && myOpinions }
-                        {myOpinions.length === 0 && <NoResultOpinion/>}
-                      </div>
-                  </div>
+                        {this.state.showOp && myOpinions}
+                        {!!! this.state.showOp && <NoResultOpinion/>}
+                 </div>
+            </div>
           )
     }
 }

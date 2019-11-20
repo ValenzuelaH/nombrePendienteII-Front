@@ -6,7 +6,20 @@ import {downvote} from "./api";
 import {agregarADeseados } from "./api";
 import Footer from './Footer';
 import ListOpinion from './components/ListOpinion';
-import OpinionCard from './components/OpinionCard';
+
+const genres = [{"k": "SCIFI" , "v": "Ciencia ficción"}, 
+               {"k": "FANTASTIC", "v": "Fantástico/Épico"},
+               {"k": "TERROR", "v": "Terror"},
+               {"k": "PINKNOVEL", "v": "Novela rosa"},
+               {"k": "THEATER", "v": "Teatro"},
+               {"k": "DETECTIVESTORY", "v": "Novela negra/Policial"},
+               {"k": "POETRY", "v": "Poesia"},
+               {"k": "DRAMA", "v": "Drama"},
+               {"k": "DYSTOPIAN", "v": "Distópico"},
+               {"k": "ESSAY", "v": "Ensayo"},
+               {"k": "STORY", "v": "Ficción"},
+               {"k": "COMEDY", "v": "Comedia"}
+                ]
 
 class BookPage extends React.Component {
     constructor(props){
@@ -50,13 +63,13 @@ class BookPage extends React.Component {
             <div className="Info-Container">
                 <div id  = "autor"> {this.props.book.authorName} </div>
                 <div> Edición {this.props.book.releaseYear} </div>
-                <div>  {this.props.book.genre} </div>
+                <div> Género: {genres.find(genre => genre.k === this.props.book.genre).v} </div><div> {this.props.book.amountOfPages} páginas </div>
                 <div> {this.props.book.amountOfPages} páginas </div>
                 <div> Votos {this.props.book.votes} </div>
                 <div id = "money"> ${this.props.book.priceInPesos} </div>
                 <div>
-                    <button id="botton-back" type="button" class="btn btn-primary" onClick={this.props.back}>Atrás</button>
-                    <button id="botton-wishlist" type="button" class="btn btn-primary" onClick={this.addToWishList}>Agregar a deseados</button>
+                    <button id="botton-back" type="button" className="btn btn-primary" onClick={this.props.back}>Atrás</button>
+                    <button id="botton-wishlist" type="button" className="btn btn-primary" onClick={this.addToWishList}>Agregar a deseados</button>
         </div>
             </div>
 
@@ -67,10 +80,9 @@ class BookPage extends React.Component {
             </div>
         </div>
 
-        <ListOpinion/>
-        <OpinionCard/>
+        <ListOpinion bybook={this.props.book.id}/>
         <div className="last">
-
+            <Footer/>
         </div>
         </div>
       )

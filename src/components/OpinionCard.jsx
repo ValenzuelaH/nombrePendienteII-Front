@@ -71,15 +71,16 @@ class OpinionCard extends React.Component{
     }
     
     render(){
-        let opinion = undefined;
+        console.log("ACA")
+        console.log(this.props)
         return(
             <div class="card">
                 <div class="card-header">
-                    Quote
+                {this.props.opinion.date} {"     " +  this.props.opinion.user.userName + "  dijo: "} 
                 </div>
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <p><cite>{this.props.opinion.msj}</cite></p>
                         <buttom href="#" class="btn btn-outline-danger izq" >Borrar</buttom>
                         <buttom href="#" class="btn btn-outline-success der">Editar</buttom>
                     </blockquote>
