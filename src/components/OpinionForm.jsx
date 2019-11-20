@@ -11,7 +11,7 @@ export default class OpinionForm extends React.Component {
     }
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.deleteInput = this.handleInput.bind(this);
+    this.deleteInput = this.deleteInput.bind(this);
   }
 
   handleSubmit(e) {
@@ -31,6 +31,7 @@ export default class OpinionForm extends React.Component {
     console.log(pseudo_opinion.user)
     console.log(pseudo_opinion)
     newOpinion(pseudo_opinion).then(res => this.props.onClick(res));
+    this.deleteInput()
   } 
   
   handleInput(e){
