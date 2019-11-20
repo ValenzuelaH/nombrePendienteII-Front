@@ -21,15 +21,15 @@ class Footer extends React.Component{
             <p className="footer-links">
               <a className="link-1" href="/app">Inicio</a>
     
-              {/* <a href="#">Blog</a>
+              <a href="#">Blog</a>
     
-              <a href="#">Pricing</a> */}
+              <a href="#">Pricing</a> 
     
               <a href="/about_us">Quienes Somos</a>
     
-              {/* <a href="#">Faq</a>
+            /* <a href="#">Faq</a>
     
-              <a href="#">Contact</a> */}
+              <a href="#">Contact</a> 
             </p>
     
             <p>{this.props.title} &copy; 2019</p>

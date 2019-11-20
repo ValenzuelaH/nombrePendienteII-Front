@@ -4,6 +4,9 @@ import './BookPage.css'
 import {upvote} from "./api";
 import {downvote} from "./api";
 import {agregarADeseados } from "./api";
+import Footer from './Footer';
+import ListOpinion from './components/ListOpinion';
+import OpinionCard from './components/OpinionCard';
 
 class BookPage extends React.Component {
     constructor(props){
@@ -57,11 +60,17 @@ class BookPage extends React.Component {
         </div>
             </div>
 
-            <div className="footer">
+            <div className="footer2">
                 ¿Ya lo leiste?
                     <button type="button" className="Accept-Button" onClick={this.upvote}>Si, esta buenardo!</button>
                     <button type="button" className="Cancel-Button" onClick={this.downvote}>Prefiero la peli</button>
             </div>
+        </div>
+
+        <ListOpinion/>
+        <OpinionCard/>
+        <div className="last">
+
         </div>
         </div>
       )
