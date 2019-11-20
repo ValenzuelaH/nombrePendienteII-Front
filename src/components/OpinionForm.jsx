@@ -15,23 +15,25 @@ export default class OpinionForm extends React.Component {
   }
 
   handleSubmit(e) {
-    e.preventDefault();
-    console.log("Se va a handlear la Opinion")
-    const pseudo_opinion = {
-      "msj":this.state.message,
-      "user":{
-        "id": 1,
-        "birthday_date": "14/04/1987",
-        "email": "h@h.com.ar",
-        "userName":"H"
-      },
-      "book":this.props.book
-    }	
-    console.log(pseudo_opinion.book)
-    console.log(pseudo_opinion.user)
-    console.log(pseudo_opinion)
-    newOpinion(pseudo_opinion).then(res => this.props.onClick(res));
-    this.deleteInput()
+    if(!this.state.message.trim() == '' ){
+      e.preventDefault();
+      console.log("Se va a handlear la Opinion")
+      const pseudo_opinion = {
+        "msj":this.state.message,
+        "user":{
+          "id": 1,
+          "birthday_date": "14/04/1987",
+          "email": "h@h.com.ar",
+          "userName":"H"
+        },
+        "book":this.props.book
+      }
+      console.log(pseudo_opinion.book)
+      console.log(pseudo_opinion.user)
+      console.log(pseudo_opinion)
+      newOpinion(pseudo_opinion).then(res => this.props.onClick(res));
+      this.deleteInput()
+    }
   } 
   
   handleInput(e){

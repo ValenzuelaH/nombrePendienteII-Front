@@ -72,16 +72,16 @@ class OpinionCard extends React.Component{
     
     render(){
         return(
-            <div class="card">
+            <div className="card">
                 <br></br>
                 <div className="card-header">
                 {this.props.opinion.date} {"     " +  this.props.opinion.user.userName + "  dijo: "} 
                 </div>
                 <div className="card-body">
-                    <blockquote class="blockquote mb-0">
+                    <blockquote className="blockquote mb-0">
                         <p><cite>{this.props.opinion.msj}</cite></p>
-                        <button href="#" class="btn btn-outline-danger izq" >Borrar</button>
-                        <button href="#" class="btn btn-outline-success der">Editar</button>
+                        <button href="#" className="btn btn-outline-danger izq" >Borrar</button>
+                        <button href="#" className="btn btn-outline-success der">Editar</button>
                     </blockquote>
                 </div>
                 <br></br>
