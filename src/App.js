@@ -7,7 +7,6 @@ import Navigation from './components/Navigation';
 import Footer from './Footer';
 import BookPage from './BookPage';
 import Header from './Header';
-import Opinion from './components/Opinion';
 
 class App extends React.Component {
   constructor(props){
@@ -99,8 +98,6 @@ class App extends React.Component {
                   </div>
               </div>
             </div>
-
-          <Opinion></Opinion>
           </div>
             { this.state.showList && <Footer title = {this.state.title}></Footer> }
         </div>

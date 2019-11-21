@@ -6,8 +6,10 @@ export default class UserProfile extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            user: null,
-            wishlist: []
+            userName: '',
+            wishlist: [],
+            birthday_date: '',
+            email: ''
         }
         this.logOut = this.logOut.bind(this);
         this.handleRes = this.handleRes.bind(this);
@@ -25,11 +27,12 @@ export default class UserProfile extends React.Component{
 
     handleRes(userObject){
         this.setState({
-            user: userObject,
-            wishlist: userObject.wishlist
+            userName: userObject.userName,
+            wishlist: userObject.wishlist,
+            birthday_date: userObject.birthday_date,
+            email: userObject.email
         })
-
-        console.log(this.state.user.wishlist)
+        console.log(userObject)
     }
     render() {
 
@@ -41,11 +44,11 @@ export default class UserProfile extends React.Component{
         return(
             <div className="user-container">
                 <div className="user-name">
-                    Gonzalo
+                    {this.state.userName}
                 </div>
                 <div className="info-container">
-                    <div> cumpleaños: 12-12-12 </div>
-                    <div> email: gonzaloguasch@hotmail.com </div>
+                    <div> cumpleaños: {this.state.birthday_date} </div>
+                    <div> email: {this.state.email} </div>
                     <div> {booksInWishlist}</div>
                     <div>
                         <button className="button" onClick={this.logOut}> log out </button>
