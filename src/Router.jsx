@@ -20,7 +20,7 @@ export default class Router extends React.Component {
             <Route exact path="/about_us" component={AboutUs} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/user" component={UserProfile} />
-            <Route exact path="/main_page" componenet = {App} />
+            <Route exact path="/main_page" component = {App} />
             {/* <Route exact path="/" component={App} /> */}
             <Route exact path="/" render={ props => <SwitcherLogInRegister {...props} /> } />
           </Switch>
