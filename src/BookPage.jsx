@@ -62,7 +62,7 @@ class BookPage extends React.Component {
             <div className="Info-Container">
                 <div id  = "autor"> {this.props.book.authorName} </div>
                 <div> Edición {this.props.book.releaseYear} </div>
-                <div> Género: {genres.find(genre => genre.k === this.props.book.genre).v} </div><div> {this.props.book.amountOfPages} páginas </div>
+                <div> Género: {genres.find(genre => genre.k === this.props.book.genre).v} </div>
                 <div> {this.props.book.amountOfPages} páginas </div>
                 <div> Votos {this.props.book.votes} </div>
                 <div id = "money"> ${this.props.book.priceInPesos} </div>
