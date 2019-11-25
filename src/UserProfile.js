@@ -50,11 +50,11 @@ export default class UserProfile extends React.Component{
                     <div> email: {this.state.email} </div>
                     <div>WishList:</div>
                     <div> {booksInWishlist}</div>
+                </div>
                     <div>
                         <button className="button" onClick={this.logOut}> log out </button>
                     </div>
                 </div>
-            </div>
         )
     }
 }
