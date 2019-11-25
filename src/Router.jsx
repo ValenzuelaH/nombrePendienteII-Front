@@ -8,6 +8,7 @@ import Content from './Content';
 import AboutUs from './AboutUs';
 import SwitcherLogInRegister from "./SwitcherLogInRegister";
 import UserProfile from "./UserProfile";
+import AgregarSaldo from "./AgregarSaldo";
 
 export default class Router extends React.Component {
   render() {
@@ -19,8 +20,8 @@ export default class Router extends React.Component {
             <Route exact path="/about_us" component={AboutUs} />
             <Route exact path="/contact" component={Prueba} />
             <Route exact path="/user" component={UserProfile} />
-            <Route exact path="/main_page" componenet = {App} />
-            {/* <Route exact path="/" component={App} /> */}
+            <Route exact path="/main_page" component = {App} />
+            <Route exact path="/agregarSaldo" component = {AgregarSaldo} />
             <Route exact path="/" render={ props => <SwitcherLogInRegister {...props} /> } />
           </Switch>
       </BrowserRouter>

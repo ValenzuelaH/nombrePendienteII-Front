@@ -48,14 +48,14 @@
 #botton-wishlist {
     margin-left: 20px;
 }
+#botton-back {
+
+}
 .footer{
-    margin-top: 20px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
     justify-content: center;
     width: 100%;
-    background-color: firebrick;
     color: white;
     text-align: center;
 }

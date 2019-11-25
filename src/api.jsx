@@ -18,4 +18,4 @@ export const agregarADeseados = body => request('post', 'app/addToWishlist', bod
 export const buscarUsuario = body => request('get', 'app/getUser/' + body.username);
 export const findAllOpinionsForABook = body => request('get', 'opinion/op_book/'+ body);
 export const newOpinion = body => request('post', 'opinion/new_opinion', body);
- 
+export const addSaldo = body => request('post', 'app/addSaldo', body);

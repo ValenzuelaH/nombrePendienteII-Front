@@ -9,10 +9,12 @@ export default class UserProfile extends React.Component{
             username: '',
             email: '',
             birthday: '',
+            saldo: '',
             wishlist: []
         }
         this.logOut = this.logOut.bind(this);
         this.handleRes = this.handleRes.bind(this);
+        this.agregarSaldo = this.agregarSaldo.bind(this);
     }
     logOut(){
         this.props.history.push('/')
@@ -30,8 +32,12 @@ export default class UserProfile extends React.Component{
             username: userObject.userName,
             email: userObject.email,
             birthday: userObject.birthday_date,
-            wishlist: userObject.wishlist
+            wishlist: userObject.wishlist,
+            saldo: userObject.saldo
         });
+    }
+    agregarSaldo(){
+        this.props.history.push('/agregarSaldo')
     }
     render() {
 
@@ -48,11 +54,13 @@ export default class UserProfile extends React.Component{
                 <div className="info-container">
                     <div> {this.state.birthdate} </div>
                     <div> email: {this.state.email} </div>
+                    <div> saldo: {this.state.saldo} </div>
                     <div>WishList:</div>
                     <div> {booksInWishlist}</div>
                 </div>
                     <div>
                         <button className="button" onClick={this.logOut}> log out </button>
+                        <button onClick={this.agregarSaldo}> Agregar saldo </button>
                     </div>
                 </div>
         )
