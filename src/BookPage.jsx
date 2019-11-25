@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import './BookPage.css'
-import {upvote} from "./api";
+import {agregarACarrito, upvote} from "./api";
 import {downvote} from "./api";
 import {agregarADeseados } from "./api";
 import ListOpinion from './components/ListOpinion';
@@ -27,7 +27,12 @@ class BookPage extends React.Component {
         downvote({id: idBook}).then(res => console.log(res))
     }
     addToCarrito(){
-        console.log( "skere" )
+        const username = localStorage.getItem('user');
+        const bookname = this.props.book.name;
+        agregarACarrito({
+            username: username,
+            bookName: bookname
+        }).then(res => console.log(res))
     }
     addToWishList(){
         const username = localStorage.getItem('user');

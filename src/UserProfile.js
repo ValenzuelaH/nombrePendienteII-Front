@@ -10,11 +10,13 @@ export default class UserProfile extends React.Component{
             email: '',
             birthday: '',
             saldo: '',
-            wishlist: []
+            wishlist: [],
+            carrito: []
         }
         this.logOut = this.logOut.bind(this);
         this.handleRes = this.handleRes.bind(this);
         this.agregarSaldo = this.agregarSaldo.bind(this);
+        this.costeCarrito = this.costeCarrito.bind(this);
     }
     logOut(){
         this.props.history.push('/')
@@ -33,17 +35,31 @@ export default class UserProfile extends React.Component{
             email: userObject.email,
             birthday: userObject.birthday_date,
             wishlist: userObject.wishlist,
+            carrito: userObject.carrito,
             saldo: userObject.saldo
         });
     }
     agregarSaldo(){
         this.props.history.push('/agregarSaldo')
     }
+    costeCarrito(){
+        let res = 0;
+        this.state.carrito.map((book, index) => {
+            res += book.priceInPesos
+        });
+        return res;
+    }
     render() {
 
         const booksInWishlist = this.state.wishlist.map((book, index) => {
             return(
                 <div> {book.name}</div>
+            )
+        });
+
+        const carrito = this.state.carrito.map((book, index) => {
+            return (
+                <div>{book.name}</div>
             )
         });
         return(
@@ -57,6 +73,9 @@ export default class UserProfile extends React.Component{
                     <div> saldo: {this.state.saldo} </div>
                     <div>WishList:</div>
                     <div> {booksInWishlist}</div>
+                    <div>Carrito: {carrito}</div>
+                    <div> Coste total carrito: ${this.costeCarrito()}</div>
+                    <div> </div>
                 </div>
                     <div>
                         <button className="button" onClick={this.logOut}> log out </button>
