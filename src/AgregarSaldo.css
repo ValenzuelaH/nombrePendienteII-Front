@@ -1,4 +1,4 @@
-.container{
+.container-saldo{
     margin-top: 160px;
     margin-left: 600px;
     border: solid black 1px;
@@ -14,4 +14,9 @@
 }
 .button-container{
     margin-bottom: 12px;
+}
+
+#saldo{
+    width: 120px;
+    height: 35px;
 }

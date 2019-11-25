@@ -21,8 +21,6 @@ export default class AgregarSaldo extends React.Component{
         }).then(res => this.handleRes(res))
     }
     handleRes(res){
-        console.log(res);
-        console.log(localStorage.getItem('user'));
         this.props.history.push('user')
     }
     setSaldo(event){
@@ -30,14 +28,14 @@ export default class AgregarSaldo extends React.Component{
     }
     render() {
         return(
-            <div className="container">
+            <div className="container-saldo">
                 Agregar Saldo
                 <div>
-                    <input className="cash-in" placeholder="$" type="text" onChange={this.setSaldo}/>
+                    <input id= "saldo" className="cash-in" placeholder="$" type="text" onChange={this.setSaldo}/>
                 </div>
                 <div className="button-container">
                     <button onClick={this.addSaldo}>ADD</button>
-                    <button>Volver</button>
+                    <button onClick={this.handleRes}>Volver</button>
                 </div>
             </div>
         )
