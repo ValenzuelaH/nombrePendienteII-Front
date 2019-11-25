@@ -19,4 +19,5 @@ export const buscarUsuario = body => request('get', 'app/getUser/' + body.userna
 export const findAllOpinionsForABook = body => request('get', 'opinion/op_book/'+ body);
 export const newOpinion = body => request('post', 'opinion/new_opinion', body);
 export const newMessage = body => request('post', 'message/new', body);
- 
+export const addSaldo = body => request('post', 'app/addSaldo', body);
+export const agregarACarrito = body => request ('post', 'app/agregarACarrito', body);

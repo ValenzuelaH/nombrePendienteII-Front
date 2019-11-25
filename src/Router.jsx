@@ -7,8 +7,9 @@ import Prueba from './Prueba';
 import Content from './Content';
 import AboutUs from './AboutUs';
 import SwitcherLogInRegister from "./SwitcherLogInRegister";
-import UserProfile from "./UserProfile";
+import UserProfile from "./UserProfile"
 import Contact from './Contact';
+import AgregarSaldo from "./AgregarSaldo";
 
 export default class Router extends React.Component {
   render() {
@@ -21,7 +22,7 @@ export default class Router extends React.Component {
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/user" component={UserProfile} />
             <Route exact path="/main_page" component = {App} />
-            {/* <Route exact path="/" component={App} /> */}
+            <Route exact path="/agregarSaldo" component = {AgregarSaldo} />
             <Route exact path="/" render={ props => <SwitcherLogInRegister {...props} /> } />
           </Switch>
       </BrowserRouter>

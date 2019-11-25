@@ -1,24 +1,10 @@
 import React from 'react';
 import './App.css';
 import './BookPage.css'
-import {upvote} from "./api";
+import {agregarACarrito, upvote} from "./api";
 import {downvote} from "./api";
 import {agregarADeseados } from "./api";
 import ListOpinion from './components/ListOpinion';
-
-const genres = [{"k": "SCIFI" , "v": "Ciencia ficción"}, 
-               {"k": "FANTASTIC", "v": "Fantástico/Épico"},
-               {"k": "TERROR", "v": "Terror"},
-               {"k": "PINKNOVEL", "v": "Novela rosa"},
-               {"k": "THEATER", "v": "Teatro"},
-               {"k": "DETECTIVESTORY", "v": "Novela negra/Policial"},
-               {"k": "POETRY", "v": "Poesia"},
-               {"k": "DRAMA", "v": "Drama"},
-               {"k": "DYSTOPIAN", "v": "Distópico"},
-               {"k": "ESSAY", "v": "Ensayo"},
-               {"k": "STORY", "v": "Ficción"},
-               {"k": "COMEDY", "v": "Comedia"}
-                ]
 
 class BookPage extends React.Component {
     constructor(props){
@@ -29,6 +15,7 @@ class BookPage extends React.Component {
         this.upvote = this.upvote.bind(this);
         this.downvote = this.downvote.bind(this);
         this.addToWishList = this.addToWishList.bind(this);
+        this.addToCarrito = this.addToCarrito.bind(this);
     }
 
     upvote(){
@@ -39,10 +26,15 @@ class BookPage extends React.Component {
         const idBook = this.props.book.id;
         downvote({id: idBook}).then(res => console.log(res))
     }
-
+    addToCarrito(){
+        const username = localStorage.getItem('user');
+        const bookname = this.props.book.name;
+        agregarACarrito({
+            username: username,
+            bookName: bookname
+        }).then(res => console.log(res))
+    }
     addToWishList(){
-        console.log(localStorage.getItem('user'));
-        console.log(this.props.book.name);
         const username = localStorage.getItem('user');
         const bookname = this.props.book.name;
         agregarADeseados({
@@ -67,21 +59,23 @@ class BookPage extends React.Component {
                 <div> Votos {this.props.book.votes} </div>
                 <div id = "money"> ${this.props.book.priceInPesos} </div>
                 <div>
-                    <button id="botton-back" type="button" className="btn btn-primary" onClick={this.props.back}>Atrás</button>
                     <button id="botton-wishlist" type="button" className="btn btn-primary" onClick={this.addToWishList}>Agregar a deseados</button>
+                    <button id="botton-wishlist" type="button" className="btn btn-primary" onClick={this.addToCarrito}>Agregar al carrito</button>
         </div>
-            </div>
-
-            <div className="footer2">
-                ¿Ya lo leiste?
-                    <button type="button" className="Accept-Button" onClick={this.upvote}>Si, esta buenardo!</button>
-                    <button type="button" className="Cancel-Button" onClick={this.downvote}>Prefiero la peli</button>
             </div>
         </div>
 
         <ListOpinion bybook={this.props.book}/>
         <div className="last">
         </div>
+             <div className="footer">
+                 ¿Ya lo leiste?
+                 <button type="button" className="Accept-Button" onClick={this.upvote}>Si, esta bueno!</button>
+                 <button type="button" className="Cancel-Button" onClick={this.downvote}>Prefiero la peli</button>
+             </div>
+             <div>
+                 <button id="botton-back" type="button" className="btn btn-primary" onClick={this.props.back}>Atrás</button>
+             </div>
         </div>
       )
   }
