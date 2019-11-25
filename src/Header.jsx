@@ -43,7 +43,7 @@ class Header extends React.Component{
             // })
           }
           <a href="/" className="item">
-            <div className="item-wrapper" onMouseDown={(e) => { e.preventDefault(); }}>
+            <div className="item-wrapper" onMouseDown={(e) => { e.preventDefault(); localStorage.clear();}}>
               Desloguear
             </div>
           </a>

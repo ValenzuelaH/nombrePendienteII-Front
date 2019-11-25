@@ -78,3 +78,23 @@
     font-size: 20px;
     color: red;
 }
+
+.Validation-Error{
+    background: #FFBABA;
+    position: fixed;
+    font-weight: bold;
+    color: #D8000C;
+    margin-left: 10px;
+    border-radius: .3em;
+    border-left-style: solid;
+}
+
+.Error {
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #D8000C;
+    background: #FFBABA;
+    margin-left: -3px;
+    border-radius: .3em;
+}

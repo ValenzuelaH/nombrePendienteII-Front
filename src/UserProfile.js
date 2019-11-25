@@ -1,6 +1,7 @@
 import React from "react";
 import './UserProfile.css';
 import {buscarUsuario} from "./api";
+import RedirectIfNotLogged from './components/RedirectIfNotLogged';
 
 export default class UserProfile extends React.Component{
     constructor(props){
@@ -22,6 +23,7 @@ export default class UserProfile extends React.Component{
         this.comprarCarrito = this.comprarCarrito.bind(this);
     }
     logOut(){
+        localStorage.clear();
         this.props.history.push('/')
     }
 
@@ -80,6 +82,7 @@ export default class UserProfile extends React.Component{
         });
         return(
             <div className="user-container">
+            <RedirectIfNotLogged></RedirectIfNotLogged>
                 <div className="user-name">
                     {this.state.username}
                 </div>
