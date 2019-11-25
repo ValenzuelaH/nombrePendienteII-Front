@@ -4,7 +4,7 @@ import Navigation from './components/Navigation';
 import { newMessage, allbooks } from "./api";
 import Header from './Header';
 import Footer from './Footer';
-
+import RedirectIfNotLogged from './components/RedirectIfNotLogged';
 
 
 class ContentContact extends React.Component {
@@ -55,6 +55,7 @@ export default class Contact extends React.Component {
   render(){
         return(
           <div>
+            <RedirectIfNotLogged></RedirectIfNotLogged>
             <div>
               <h1>ACA</h1>
             </div>

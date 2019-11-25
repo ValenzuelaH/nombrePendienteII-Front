@@ -1,4 +1,5 @@
 import React from 'react';
+import  { Redirect } from 'react-router-dom'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Books } from './Books.json';
@@ -7,6 +8,7 @@ import Navigation from './components/Navigation';
 import Footer from './Footer';
 import BookPage from './BookPage';
 import Header from './Header';
+import RedirectIfNotLogged from './components/RedirectIfNotLogged';
 
 class App extends React.Component {
   constructor(props){
@@ -58,7 +60,7 @@ class App extends React.Component {
   }
 
   render(){
-
+    
     const myBooks = this.state.books.map((book, i) => {
       return(
         <div className="col-md-4" key={i}>
@@ -81,10 +83,11 @@ class App extends React.Component {
           </div>
         </div>
         )
-    })
-
-    return (
+      })
+      
+      return (
         <div className="App">
+          <RedirectIfNotLogged></RedirectIfNotLogged>
           <Header title = {this.state.title}></Header>
           <Navigation title = {this.state.title} books={this.state.books} fromComponent="/home"/>
             <div className="container">

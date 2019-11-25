@@ -5,6 +5,7 @@ import Footer from './Footer';
 import Navigation from './components/Navigation';
 import './App.css';
 import { allbooks } from './api';
+import RedirectIfNotLogged from './components/RedirectIfNotLogged';
 
 class AboutUs extends React.Component{
 
@@ -24,6 +25,7 @@ class AboutUs extends React.Component{
         
         return(
             <React.Fragment>
+                <RedirectIfNotLogged></RedirectIfNotLogged>
                 <Header title = {title}></Header>
                  <Navigation title = {title} books={this.state.books} fromComponent="/about_us"/>
                 <body className="aboutUs">
