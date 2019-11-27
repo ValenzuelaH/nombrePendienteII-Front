@@ -132,22 +132,17 @@ export default class Register extends React.Component{
                 <div className="Info-Container">
                     Please, fill with your info!
                 </div>
-                <div className="a">
-                    Name: 
+                <div className="data-container">
+                <div>
+                    <input placeholder="Name" type="text" className="Generic-Input" onChange={this.setName} onBlur={this.validateName}/>
                 </div>
                 <div>
-                    <input type="text" className="Generic-Input" onChange={this.setName} onBlur={this.validateName}/>
-                </div>
-                <div>
-                    Email:
-                </div>
-                <div>
-                    <input type="text" className="Generic-Input" onChange={this.setEmail} onBlur={this.validateEmail}/>
+                    <input placeholder="Email" type="text" className="Generic-Input" onChange={this.setEmail} onBlur={this.validateEmail}/>
                     <span className="Validation-Error">
                         {this.state.emailError}
                     </span>
                 </div>
-                <div>
+                <div className="birth">
                     Date of birth:
                 </div>
                 <div>
@@ -155,22 +150,21 @@ export default class Register extends React.Component{
                            min="1920-01-01" max="2020-01-01" onChange={this.setDate}/>
                 </div>
                 <div>
-                    Password:
-                </div>
-                <div>
-                    <input type="password" className="Generic-Input" onChange={this.setpassword} onBlur={this.validatePassword}/>
+                    <input placeholder="Password" type="password" className="Generic-Input" onChange={this.setpassword} onBlur={this.validatePassword}/>
                     <span className="Validation-Error">
                         {this.state.passwordError}
                     </span>
                 </div>
+                </div>
                 <div className="Button-container">
-                    <div className="SendButton-container">
-                        <button onClick={this.sendForm}>Send</button>
+                    <div>
+                        <button className="SendButton-container" onClick={this.sendForm}>Send</button>
                     </div>
-                    <div className="CancelButton-container">
-                        <button onClick={this.props.changeLogin}>Cancel</button>
+                    <div>
+                        <button className="CancelButton-container" onClick={this.props.changeLogin}>Cancel</button>
                     </div>
                 </div>
+
                 <div className="Error">
                     {this.state.errormessage}
                 </div>

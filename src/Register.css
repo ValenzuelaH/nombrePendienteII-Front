@@ -1,30 +1,28 @@
 .Register-Container{
-    margin-top: 113px;
-    margin-left: 440px;
-    margin-right: 1200px;
-
-    border: 1px solid red;
-    width: 520px;
-
-    padding-left: 12px;
-    border-radius: 5px;
-    background-color: #4267b2;
+    margin-top: 200px;
+    margin-left: 600px;
     align-items: center;
-
 }
 
 .Info-Container{
-    font-size: 45px;
+    font-size: 30px;
     color: white;
     margin-bottom: 20px;
+    margin-left: 130px;
+    font-weight: bold;
 }
+
+.data-container{
+    margin-left: 130px;
+}
+
 .Generic-Input{
-    background-color: #1f2346;
-    color: #ffffff;
+    background-color: #9eb1c0;
+    color: #6c585a;
     padding-left: 4px;
     padding-right: 4px;
     border: 1px solid white;
-    border-radius: 1px;
+    border-radius: 8px;
     display: inline;
     margin-bottom: 12px;
 }
@@ -36,19 +34,33 @@
     display: flex;
     justify-content: center;
     margin-bottom: 12px;
+
+}
+.birth{
+    color:white;
 }
 
 .SendButton-container{
-    margin-right: 17px;
-    background-color: #37b97b;
-    color: #ffffff;
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-left: 20px;
     border: 1px solid #000000;
-    border-radius: 2px;
+    border-radius: 5px;
+    color: white;
+    background-color: #2975a6;
+    width: 80px;
+    height: 30px;
 }
+
 .CancelButton-container{
-    background-color: firebrick;
+    margin-top: 20px;
+    margin-right: 340px;
     border: 1px solid #000000;
-    border-radius: 2px;
+    border-radius: 5px;
+    color: white;
+    background-color: #2975a6;
+    width: 80px;
+    height: 30px;
 }
 
 .Validation-Error{
