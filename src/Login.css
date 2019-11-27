@@ -1,21 +1,22 @@
 .Login-Container{
-    margin: 123px auto auto;
+    margin-top: 200px;
+    margin-left: 600px;
     width: 40%;
-    padding: 10px 0px 10px 10px;
-    -webkit-box-shadow: 3px 1.5px 8px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 3px 1.5px 8px 0px rgba(0,0,0,0.75);
-    box-shadow: 3px 1.5px 8px 0px rgba(0,0,0,0.75);
-    background-color: coral;
-    justify-content: center;
+    justify-content: right;
+    color:white;
 }
 .Welcome-Container{
-    text-align: center;
-    font-size: 30px;
-    border-bottom: 1px solid #0F2027;
-    border-radius: 1px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 35px;
     width: 100%;
-
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    margin-left: 126px;
+}
+.h2-info-container{
+    text-align: left;
+    font-size: 20px;
+    margin-left: 132px;
 }
 
 .UserName-Container{
@@ -30,16 +31,18 @@
 }
 .UserNameText-Container{
     display: inline;
-    background-color: #ff7f3f;
-    border-radius: 100px;
+    background-color: #9eb1c0;
+    border-radius: 10px;
     border: 1px solid #203A43;
     padding-left: 12px;
     padding-right: 12px;
-    width: 160px;
+    width: 260px;
     display:inline;
     justify-content: center;
+    color:black;
 
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 130px;
 
 }
 .Flex-container{
@@ -51,10 +54,12 @@
     justify-content: center;
 }
 .LogInButton{
-    margin-right: 12px;
-    color:#000000;
+    margin-right: 52px;
+    margin-top: 40px;
+    background-color:#2975a6;
+    color:white;
     border: 1px solid #000000;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 .LogInButton:hover{
     color:#ffffff;
@@ -63,9 +68,11 @@
 
 .registerButton{
     margin-right: 12px;
-    color:#000000;
+    margin-top: 39px;
+    background-color:#2975a6;
+    color:white;
     border: 1px solid #000000;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
 .registerButton:hover{

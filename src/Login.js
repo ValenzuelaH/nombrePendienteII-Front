@@ -94,19 +94,16 @@ export default class Login extends React.Component{
             return(
                 <div className="Login-Container">
                     <div className="Welcome-Container">
-                        Welcome to Books 3/4, Please log in!
+                        Welcome to Books 3/4
                     </div>
-                    <div className="UserName-Container">
-                        User name:
+                    <div className="h2-info-container">
+                        Please log in!
                     </div>
                     <div className="Flex-container">
                         <input className="UserNameText-Container" type="text" placeholder="Your user name" onChange={this.handleName} onBlur={this.validateName}/>
                         <span className="Validation-Error">
                             {this.state.nameError}
                         </span>
-                    </div>
-                    <div className="Password-container">
-                        Password:
                     </div>
                     <div >
                         <input type="password" className="UserNameText-Container" placeholder="Your password" onChange={this.handlePassword} onBlur={this.validatePassword}/>
@@ -121,7 +118,7 @@ export default class Login extends React.Component{
                         </div>
                         <div>
                             <button type = "button" className="registerButton" onClick={this.props.changeRegister}>
-                                Don't have an account? Register here.
+                                Register here
                             </button>
                         </div>
                     </div>
