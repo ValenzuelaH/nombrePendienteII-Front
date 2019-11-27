@@ -6,6 +6,13 @@ import {downvote} from "./api";
 import {agregarADeseados } from "./api";
 import ListOpinion from './components/ListOpinion';
 
+const genres = [
+                {k: "STORY", v: "Ficcion"},
+                {k: "PINKNOVEL" , v:"Novela rosa"},
+                {k: "Otro" , v:"Otro" },
+                {k: "ESSAY" , v:"Ensayo"}
+]
+
 class BookPage extends React.Component {
     constructor(props){
         super(props);
@@ -54,7 +61,7 @@ class BookPage extends React.Component {
             <div className="Info-Container">
                 <div id  = "autor"> {this.props.book.authorName} </div>
                 <div> Edición {this.props.book.releaseYear} </div>
-                <div> Género: {genres.find(genre => genre.k === this.props.book.genre).v} </div>
+                <div> Género: {this.props.book.genre} </div>
                 <div> {this.props.book.amountOfPages} páginas </div>
                 <div> Votos {this.props.book.votes} </div>
                 <div id = "money"> ${this.props.book.priceInPesos} </div>
