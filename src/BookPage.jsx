@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import './BookPage.css'
-import {agregarACarrito, upvote} from "./api";
+import {agregarACarrito, findBookbyId, upvote} from "./api";
 import {downvote} from "./api";
 import {agregarADeseados } from "./api";
 import ListOpinion from './components/ListOpinion';
@@ -17,21 +17,27 @@ class BookPage extends React.Component {
     constructor(props){
         super(props);
         this.state = {
+            votes: 0
         };
 
         this.upvote = this.upvote.bind(this);
         this.downvote = this.downvote.bind(this);
         this.addToWishList = this.addToWishList.bind(this);
         this.addToCarrito = this.addToCarrito.bind(this);
+        this.updateVotes = this.updateVotes.bind(this);
     }
-
     upvote(){
         const idBook = this.props.book.id;
-        upvote({id: idBook}).then(res => console.log(res))
+        upvote({id: idBook}).then(res => this.updateVotes(res))
     }
     downvote(){
         const idBook = this.props.book.id;
-        downvote({id: idBook}).then(res => console.log(res))
+        downvote({id: idBook}).then(res => this.updateVotes(res))
+    }
+    updateVotes(objectBook){
+        this.setState({
+            votes: objectBook.votes
+        })
     }
     addToCarrito(){
         const username = localStorage.getItem('user');
@@ -63,7 +69,7 @@ class BookPage extends React.Component {
                 <div> Edición {this.props.book.releaseYear} </div>
                 <div> Género: {this.props.book.genre} </div>
                 <div> {this.props.book.amountOfPages} páginas </div>
-                <div> Votos {this.props.book.votes} </div>
+                <div> Votos {this.state.votes} </div>
                 <div id = "money"> ${this.props.book.priceInPesos} </div>
                 <div>
                     <button id="botton-wishlist" type="button" className="btn btn-primary" onClick={this.addToWishList}>Agregar a deseados</button>
