@@ -83,24 +83,28 @@ export default class UserProfile extends React.Component{
         return(
             <div className="user-container">
             <RedirectIfNotLogged></RedirectIfNotLogged>
-                <div className="user-name">
-                    {this.state.username}
-                </div>
                 <div className="info-container">
-                    <div> {this.state.birthdate} </div>
-                    <div> email: {this.state.email} </div>
-                    <div> saldo: {this.state.saldo} </div>
-                    <div>WishList:</div>
-                    <div> {booksInWishlist}</div>
-                    <div>Carrito: {carrito}</div>
-                    <div> Coste total carrito: ${this.costeCarrito()}</div>
+                    <div className="titles-values">
+                        <div className="child"> email</div>
+                        <div className="child"> saldo</div>
+                        <div className="child">WishList</div>
+                        <div className="child"> Carrito</div>
+                        <div className="child">Coste total </div>
+                    </div>
+                    <div className="titles-values">
+                        <div className="child"> {this.state.email}</div>
+                        <div className="child"> {this.state.saldo}</div>
+                        <div className="child"> {booksInWishlist.length} </div>
+                        <div className="child"> {carrito.length} </div>
+                        <div className="child"> ${this.costeCarrito()} </div>
+                    </div>
                     <div> {this.state.tienecompra && "No tenes libros en tu carrito"}</div>
                     <div> {this.state.teAlcanzaLaPlata && "No tienes la plata necesaria, haz un recargo de saldo"}</div>
                 </div>
                     <div>
-                        <button className="button" onClick={this.logOut}> log out </button>
-                        <button onClick={this.agregarSaldo}> Agregar saldo </button>
-                        <button className="button" onClick ={this.comprarCarrito}>Comprar todo el carrito</button>                                                       
+                        <button className="button-saldo" onClick={this.agregarSaldo}> Agregar saldo </button>
+                        <button className="button-carro" onClick ={this.comprarCarrito}>Comprar todo el carrito</button>
+                        <button className="button-log" onClick={this.logOut}> log out </button>
                     </div>
                 </div>
         )

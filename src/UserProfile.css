@@ -1,12 +1,25 @@
 .user-container{
-    margin-top: 170px;
-    margin-left: 440px;
-    color: white;
+    margin-top: 120px;
+    margin-left: 270px;
+    color: #255072;
     border-radius: 20px;
     border: 1px solid #127bca;
-    width: 320px;
+    width: 920px;
+    background-image: linear-gradient(#808080, #ffffff);
+}
+.titles-values {
+    display: inline;
+    margin: 0 1em 0 1em;
+    width: 30%;
+
+    overflow: hidden;
 }
 
+.child{
+    float: left;
+    width: 180px;
+    height: 50px;
+}
 .user-name{
     margin-left: 12px;
     font-size: 30px;
@@ -14,10 +27,29 @@
 }
 
 .info-container{
+    margin-top: 40px;
     text-align: center;
+    overflow: hidden;
 }
 
-.button{
+.button-carro{
     margin-top: 12px;
     margin-bottom: 12px;
+    margin-left: 12px;
+    background-color: white;
+    border: 1px solid #255072;
+    border-radius: 8px;
+    color:#255072;
+}
+.button-saldo{
+    margin-left: 300px;
+    background-color: #255072;
+    color:white;
+    border-radius: 8px;
+}
+.button-log{
+    margin-left: 10px;
+    background-color: #255072;
+    color:white;
+    border-radius: 8px;
 }
