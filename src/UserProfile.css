@@ -32,7 +32,7 @@
     overflow: hidden;
 }
 
-.button-carro{
+.button-carro-back{
     margin-top: 12px;
     margin-bottom: 12px;
     margin-left: 12px;
@@ -41,15 +41,24 @@
     border-radius: 8px;
     color:#255072;
 }
-.button-saldo{
+#espacio{
     margin-left: 300px;
-    background-color: #255072;
-    color:white;
-    border-radius: 8px;
 }
-.button-log{
+.button-saldo-log{
     margin-left: 10px;
     background-color: #255072;
     color:white;
     border-radius: 8px;
+}
+.button-saldo-log:hover{
+    background-color: white;
+    color:#255072;
+    border-radius: 8px;
+    border: 1px solid #255072
+}
+.button-carro-back:hover{
+    background-color: #255072;
+    border: 1px solid white;
+    border-radius: 8px;
+    color: white;
 }

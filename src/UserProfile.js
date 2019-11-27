@@ -21,6 +21,7 @@ export default class UserProfile extends React.Component{
         this.agregarSaldo = this.agregarSaldo.bind(this);
         this.costeCarrito = this.costeCarrito.bind(this);
         this.comprarCarrito = this.comprarCarrito.bind(this);
+        this.goBack = this.goBack.bind(this);
     }
     logOut(){
         localStorage.clear();
@@ -59,6 +60,9 @@ export default class UserProfile extends React.Component{
     }
     agregarSaldo(){
         this.props.history.push('/agregarSaldo')
+    }
+    goBack(){
+        this.props.history.push('/app')
     }
     costeCarrito(){
         let costetotal = 0;
@@ -102,9 +106,10 @@ export default class UserProfile extends React.Component{
                     <div> {this.state.teAlcanzaLaPlata && "No tienes la plata necesaria, haz un recargo de saldo"}</div>
                 </div>
                     <div>
-                        <button className="button-saldo" onClick={this.agregarSaldo}> Agregar saldo </button>
-                        <button className="button-carro" onClick ={this.comprarCarrito}>Comprar todo el carrito</button>
-                        <button className="button-log" onClick={this.logOut}> log out </button>
+                        <button id="espacio"className="button-saldo-log" onClick={this.agregarSaldo}> Agregar saldo </button>
+                        <button className="button-carro-back" onClick ={this.comprarCarrito}>Comprar todo el carrito</button>
+                        <button className="button-saldo-log" onClick={this.logOut}> log out </button>
+                        <button className="button-carro-back" onClick={this.goBack}>volver</button>
                     </div>
                 </div>
         )

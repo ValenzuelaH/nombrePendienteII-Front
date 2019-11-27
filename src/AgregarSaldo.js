@@ -34,8 +34,8 @@ export default class AgregarSaldo extends React.Component{
                     <input id= "saldo" className="cash-in" placeholder="$" type="text" onChange={this.setSaldo}/>
                 </div>
                 <div className="button-container">
-                    <button onClick={this.addSaldo}>ADD</button>
-                    <button onClick={this.handleRes}>Volver</button>
+                    <button className="add-cancel" onClick={this.addSaldo}>ADD</button>
+                    <button className="add-cancel" onClick={this.handleRes}>Volver</button>
                 </div>
             </div>
         )

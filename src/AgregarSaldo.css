@@ -1,7 +1,10 @@
 .container-saldo{
     margin-top: 160px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     margin-left: 600px;
     border: solid black 1px;
+    background-color: #145774;
     width: 200px;
     text-align: center;
     color:white;
@@ -14,6 +17,15 @@
 }
 .button-container{
     margin-bottom: 12px;
+}
+.add-cancel{
+    margin-right: 12px;
+    border-radius: 12px;
+    background-color:  #145774;
+    border: 1px solid black;
+}
+.add-cancel:hover{
+    background-color: white;
 }
 
 #saldo{
