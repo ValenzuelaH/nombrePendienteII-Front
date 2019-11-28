@@ -1,0 +1,33 @@
+.card-container {
+    background-image: linear-gradient(#155872, #114769);
+    border: 1px solid black;
+    border-radius: 12px;
+    margin-bottom: 22px;
+    margin-left: 30px;
+    color: #e0ffff;
+    padding: 16px 8px 40px 8px;
+    width: 180px;
+    height: auto;
+}
+
+.ver-mas-button{
+    background-color: #2f85c2;
+    border-radius: 15px;
+    border: 1px solid #2f85c2;
+    margin-bottom: 8px;
+    margin-top: 12px;
+    color:white;
+}
+.title-name{
+    text-transform: uppercase;
+    font-size: 22px;
+}
+.price-container{
+    font-weight: bold;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+.author-container{
+    margin-bottom: 8px;
+    color: #c0c0c0;
+}

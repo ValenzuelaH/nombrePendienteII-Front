@@ -1,6 +1,7 @@
 import React from 'react';
 import  { Redirect } from 'react-router-dom'
 import './App.css';
+import './App_card.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Books } from './Books.json';
 import {allbooks} from "./api";
@@ -63,24 +64,14 @@ class App extends React.Component {
     
     const myBooks = this.state.books.map((book, i) => {
       return(
-        <div className="col-md-4" key={i}>
-          <div className="card mt-4">
-            <div className="card-headercard-title text-center">
-              <h5>{book.name}</h5>
-            </div>
-            <div className="card-body">
-              <p>{"Autor: " + book.authorName}</p>
-              <p><mark>{"Paginas: " + book.amountOfPages}</mark></p>
-              <p><mark>{"Precio: $" + book.priceInPesos}</mark></p>
-              <div className="card-footer">
-              <button
-                className="btn btn-danger"
-                onClick={this.readDescription.bind(this, i)}>
+            <div className="card-container">
+                <div  className="title-name">{book.name}</div>
+                <div className="author-container">{book.authorName}</div>
+              <div>{"Paginas: " + book.amountOfPages}</div>
+              <div className="price-container">${book.priceInPesos}</div>
+              <button className="ver-mas-button" onClick={this.readDescription.bind(this, i)}>
                 Ver más!
               </button>
-            </div>
-            </div>  
-          </div>
         </div>
         )
       })
