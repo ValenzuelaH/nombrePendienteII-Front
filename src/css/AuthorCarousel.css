@@ -1,0 +1,40 @@
+.card-carousel{
+    text-align: center;
+    padding-top: 10px !important;
+    opacity: 1;
+    width: 85% !important;
+    color: white;
+    margin-left: 8%;
+}
+
+.card-title{
+    color: #262626;
+    display: block;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0 !important;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: black !important;
+}
+
+.follow{
+    background-color: #3897f0 !important;
+    border: 1px solid #3897f0 !important;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 20px !important;
+}
+
+.slick-slider{
+    margin-bottom: 1.5rem;
+}

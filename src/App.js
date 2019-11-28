@@ -21,11 +21,14 @@ class App extends React.Component {
       title: "Books 3/4",
       showList: true,
       showBook: false,
-      go:1
+      go:1,
+      allBooksStatic: []
     };
     this.handleAddBook = this.handleAddBook.bind(this);
     this.callToBack = this.callToBack.bind(this);
     this.setBooks = this.setBooks.bind(this);
+    this.readDescription = this.readDescription.bind(this);
+    this.switchToBook = this.switchToBook.bind(this);
   }
 
   componentDidMount() {
@@ -34,7 +37,8 @@ class App extends React.Component {
 
     setBooks(allBooks){
         this.setState({
-            books: allBooks
+            books: allBooks,
+            allBooksStatic: allBooks
         })
     }
     callToBack(){
@@ -46,12 +50,17 @@ class App extends React.Component {
     )
   }
 
-  readDescription(index) {
+  readDescription(id) {
     this.setState({
       showBook: true,
       showList: false,
-      go:index
+      go:id
     })
+  }
+
+  switchToBook(event) {
+    this.callToBack();
+    this.readDescription(event.target.id);
   }
 
   handleAddBook(book) {
@@ -70,7 +79,7 @@ class App extends React.Component {
                 <div className="author-container">{book.authorName}</div>
               <div>{"Paginas: " + book.amountOfPages}</div>
               <div className="price-container">${book.priceInPesos}</div>
-              <button className="ver-mas-button" onClick={this.readDescription.bind(this, i)}>
+              <button className="ver-mas-button" onClick={this.readDescription.bind(this, book.id)}>
                 Ver más!
               </button>
         </div>
@@ -84,12 +93,12 @@ class App extends React.Component {
           <NavigationFachero title={this.state.title} books_length = {this.state.books.length} />
             <div className="container">
              <div className="row mt-4">
-                <div className="col-md-3 text-center">
-                </div>
-                <div className="col-md-8">
+                {/* <div className="col-md-3 text-center">
+                </div> */}
+                <div className="col-md-12">
                   <div className="row">
                       { this.state.showList && myBooks }
-                    { this.state.showBook && <BookPage back={this.callToBack} book={this.state.books[this.state.go]}/> }
+                    { this.state.showBook && <BookPage back={this.callToBack} book={this.state.allBooksStatic.find(elem => elem.id == this.state.go)} changeToBookById={this.switchToBook}/> }
                   </div>
               </div>
             </div>

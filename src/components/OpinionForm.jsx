@@ -53,10 +53,10 @@ export default class OpinionForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
+          <div className="form-group antiContainer">
             <div className="card">
               <div className="card-header">
-                {"Nos interesa saber que pensas"} 
+                {"Nos interesa saber qué pensas"} 
               </div>
               <div className="card-body">
                 {/* <blockquote className="blockquote mb-0"> */}

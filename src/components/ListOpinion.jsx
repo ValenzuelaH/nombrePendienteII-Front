@@ -120,9 +120,9 @@ class ListOpinion extends React.Component{
                 <div className="container">
                         <br></br><br></br>
                         {<OpinionForm book={this.props.bybook} onClick={this.handleAddOpinion.bind(this)}/>}
-                        <br></br><br></br>
+                        {/* <br></br><br></br> */}
                         {this.state.noResult && <NoResultOpinion/>}
-                        <br></br><br></br>
+                        {/* <br></br><br></br> */}
                         {this.state.showOp && myOpinions}
                         
                  </div>
@@ -156,7 +156,7 @@ export default ListOpinion;
 class NoResultOpinion extends React.Component{
     render(){
         return(
-            <h3 style={{color:"white", paddingTop: "80px", padding: "80px"}}> No hay opiniones todavia para este libro. ¿Por qué no nos contas que te parecio?</h3>
+            <h3 style={{color:"black", paddingTop: "80px", padding: "80px"}}> No hay opiniones todavia para este libro. ¿Por qué no nos contas que te parecio?</h3>
         )
     }
 }
