@@ -80,7 +80,7 @@ class OpinionCard extends React.Component{
                 <div className="card-body">
                     <blockquote className="blockquote mb-0">
                         <p><cite>{this.props.opinion.msj}</cite></p>
-                        <button href="#" className="btn btn-outline-danger izq" >Borrar</button>
+                        <button onClick={this.props.delete} className="btn btn-outline-danger izq" >Borrar</button>
                         <button href="#" className="btn btn-outline-success der">Editar</button>
                     </blockquote>
                 </div>

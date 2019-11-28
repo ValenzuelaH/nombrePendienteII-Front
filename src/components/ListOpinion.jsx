@@ -19,6 +19,7 @@ class ListOpinion extends React.Component{
     //    this.handleSendClick = this.handleSendClick.bind(this);
         this.setOpinions = this.setOpinions.bind(this);
         this.handleAddOpinion = this.handleAddOpinion.bind(this);
+        this.handleDeleteOpinion =this.handleDeleteOpinion.bind(this);
     }
 
     componentDidMount() {
@@ -31,6 +32,19 @@ class ListOpinion extends React.Component{
             noresult: allOpinion.length == 0,
             opinions: allOpinion
         })
+    }
+
+    removeTodo(index) {
+        console.log(index);
+        
+      }
+
+    handleDeleteOpinion(opinion){
+        this.setState({
+            opinions: this.state.opinions.filter((e, i) => {
+              return i.id !== opinion.id
+            })
+          });
     }
 
     handleAddOpinion(opinion) {
@@ -106,11 +120,10 @@ class ListOpinion extends React.Component{
 //    }
 //    
     render(){
-
         const myOpinions = this.state.opinions.map((opinion, i) => {
             return(
               <div key={i}>
-                <OpinionCard opinion={opinion} style={{}}opinion={opinion}/>
+                <OpinionCard delete={this.handleDeleteOpinion.bind(this)}opinion={opinion} style={{}}opinion={opinion}/>
               </div>
               )
           })
