@@ -36,6 +36,7 @@ export default class OpinionForm extends React.Component {
         }
       newOpinion(pseudo_opinion).then(res => this.props.onClick(res));
       this.deleteInput()
+      alert("La opinión fue enviada con éxito.");
     }
   } 
   

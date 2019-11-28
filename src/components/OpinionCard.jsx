@@ -33,16 +33,12 @@ class OpinionCard extends React.Component{
     }
 
     deleteOpinion() {
-        //borrar la opinion en el back
-
-        //if (borro == "200") {
             this.setState({
                 input: "",
                 date: "",
                 time: "",
                 showOp: false
             })
-        // }
     }
 
     editOpinion(e) {
@@ -54,25 +50,7 @@ class OpinionCard extends React.Component{
 
     }
 	
-	handleSendClick(e) {
-        if (! this.state.input.trim() == "" ){
-            
-    
-        //pasar valores al backend
-    
-        //borrar el texto del input
-        this.deleteInput();
-    
-        //mostrar mensaje de "opinion enviada"
-    
-        // if (respuesta == "200") {
-            alert("La opinión fue enviada con éxito.");
-            e.preventDefault();
-            // }
-        }
-    }
-
-    deleting(){
+	deleting(){
         deleteMessage({id:this.props.opinion.id})
         this.props.delete()
     }
