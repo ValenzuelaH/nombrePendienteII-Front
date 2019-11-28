@@ -1,0 +1,43 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+li {
+    display: inline;
+}
+
+#white{
+    color:white;
+}
+.navigation-container{
+    background-color: #071b57;
+    height: 60px;
+
+    padding-top: 20px;
+}
+
+.home-container{
+    margin-left: 650px;
+    color:white;
+}
+
+.quien-container{
+    margin-left: 40px;
+    color:white;
+}
+
+.contacto-conteiner{
+    margin-left: 40px;
+    color:white;
+}
+
+.perfil-container{
+    margin-left: 40px;
+    color:white;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 4px 4px 4px 4px;
+}

@@ -9,6 +9,7 @@ import Navigation from './components/Navigation';
 import Footer from './Footer';
 import BookPage from './BookPage';
 import Header from './Header';
+import NavigationFachero from "./NavigationFachero";
 import RedirectIfNotLogged from './components/RedirectIfNotLogged';
 
 class App extends React.Component {
@@ -77,10 +78,10 @@ class App extends React.Component {
       })
       
       return (
-        <div className="App">
+        <div id="fondo" className="App">
           <RedirectIfNotLogged></RedirectIfNotLogged>
-          <Header title = {this.state.title}></Header>
-          <Navigation title = {this.state.title} books={this.state.books} fromComponent="/home"/>
+            {/*<Navigation title = {this.state.title} books={this.state.books} fromComponent="/home"/>*/}
+          <NavigationFachero title={this.state.title} books_length = {this.state.books.length} />
             <div className="container">
              <div className="row mt-4">
                 <div className="col-md-3 text-center">
