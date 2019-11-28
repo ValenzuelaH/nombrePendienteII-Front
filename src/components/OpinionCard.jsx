@@ -1,5 +1,6 @@
 import React from 'react';
 import './Opinion.css';
+import {deleteMessage } from '../api';
 
 class OpinionCard extends React.Component{
     constructor(props) {
@@ -15,6 +16,7 @@ class OpinionCard extends React.Component{
         this.deleteOpinion = this.deleteOpinion.bind(this);
         this.editOpinion = this.editOpinion.bind(this);
         this.handleSendClick = this.handleSendClick.bind(this);
+        this.deleting = this.deleting.bind(this);
     }
 
     handleInputChange(e) {
@@ -69,10 +71,14 @@ class OpinionCard extends React.Component{
             // }
         }
     }
+
+    deleting(){
+        deleteMessage({id:this.props.opinion.id})
+        this.props.delete()
+    }
     
     render(){
         const user = localStorage.getItem('user');
-        console.log(user)
         return(
             <div className="card">
                 <br></br>
@@ -82,7 +88,7 @@ class OpinionCard extends React.Component{
                 <div className="card-body">
                     <blockquote className="blockquote mb-0">
                         <p><cite>{this.props.opinion.msj}</cite></p>
-                        {this.props.opinion.user.userName == user && <button onClick={this.props.delete} className="btn btn-outline-danger izq" >Borrar</button>}
+                        {this.props.opinion.user.userName == user && <button onClick={this.deleting.bind(this)} className="btn btn-outline-danger izq" >Borrar</button>}
                         {this.props.opinion.user.userName == user && <button href="#" className="btn btn-outline-success der">Editar</button>}
                     </blockquote>
                 </div>
