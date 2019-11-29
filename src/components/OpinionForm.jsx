@@ -1,38 +1,42 @@
 import { Redirect } from 'react-router-dom';
 import React from 'react';
-import { newOpinion } from '../api';
+import { newOpinion, buscarUsuario } from '../api';
 
 export default class OpinionForm extends React.Component {
   constructor(props){
     super(props);
     this.state={
       message: '',
-      user: this.props.user
+      user: undefined
     }
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.deleteInput = this.deleteInput.bind(this);
+    this.handleRes = this.handleRes.bind(this);
+  }
+
+  componentDidMount() {
+    const user = localStorage.getItem('user');
+    buscarUsuario({
+        username: user
+    }).then(res => this.handleRes(res))
+  }
+
+  handleRes(userObject){
+    this.setState({user:userObject})
   }
 
   handleSubmit(e) {
     e.preventDefault();
     if(!this.state.message.trim() == '' ){
-      console.log("Se va a handlear la Opinion")
-      const pseudo_opinion = {
-        "msj":this.state.message,
-        "user":{
-          "id": 1,
-          "birthday_date": "14/04/1987",
-          "email": "h@h.com.ar",
-          "userName":"H"
-        },
-        "book":this.props.book
-      }
-      console.log(pseudo_opinion.book)
-      console.log(pseudo_opinion.user)
-      console.log(pseudo_opinion)
+         const pseudo_opinion = {
+          "msj": this.state.message,
+          "user": this.state.user,
+          "book": this.props.book
+        }
       newOpinion(pseudo_opinion).then(res => this.props.onClick(res));
       this.deleteInput()
+      alert("La opinión fue enviada con éxito.");
     }
   } 
   
@@ -53,10 +57,10 @@ export default class OpinionForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
+          <div className="form-group antiContainer">
             <div className="card">
               <div className="card-header">
-                {"Nos interesa saber que pensas"} 
+                {"Nos interesa saber qué pensas"} 
               </div>
               <div className="card-body">
                 {/* <blockquote className="blockquote mb-0"> */}

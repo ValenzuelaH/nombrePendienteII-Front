@@ -20,14 +20,14 @@ padding: 0;
 font-family: Helvetica, sans-serif;
 }
 body {
-background: #25303B !important;
+background: #233776 !important;
 }
 section#timeline {
 width: 80%;
 margin: 20px auto;
 position: relative;
 height: 100%;
-background: #25303B !important;
+background: #233776 !important;
 }
 section#timeline:before {
 content: '';
@@ -69,10 +69,10 @@ border-radius: 100%;
 font-size: 12px;
 font-weight: 900;
 text-transform: uppercase;
-background: #292c2f;
+background: #071b57;
 color: rgba(255,255,255,0.5);
 border: 2px solid rgba(255,255,255,0.2);
-box-shadow: 0 0 0 7px #25303B;
+box-shadow: 0 0 0 5px #1a365c;
 }
 section#timeline article div.inner span.date span {
 display: block;

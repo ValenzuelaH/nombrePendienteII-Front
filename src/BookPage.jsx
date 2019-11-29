@@ -5,6 +5,7 @@ import {agregarACarrito, findBookbyId, upvote} from "./api";
 import {downvote} from "./api";
 import {agregarADeseados } from "./api";
 import ListOpinion from './components/ListOpinion';
+import AuthorCarousel from './components/AuthorCarousel';
 
 const genres = [
                 {k: "STORY", v: "Ficcion"},
@@ -55,16 +56,16 @@ class BookPage extends React.Component {
             bookName: bookname
         }).then(res => console.log(res));
     }
-
-  render(){
-     return (
-         <div>
-        <div className="Book-Container">
-        
+    
+    render(){
+        return (
+        <div className="col-md-12">
+        <AuthorCarousel book={this.props.book} changeToBookById={this.props.changeToBookById}></AuthorCarousel>
+        <div className="Book-Container">        
             <div className="Book-name">
                {this.props.book.name}
             </div>
-            <div className="Info-Container">
+            <div className="Info-Container-BookPage">
                 <div id  = "autor"> {this.props.book.authorName} </div>
                 <div> Edición {this.props.book.releaseYear} </div>
                 <div> Género: {this.props.book.genre} </div>

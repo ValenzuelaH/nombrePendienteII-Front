@@ -1,14 +1,24 @@
 .Book-Container {
     align-items: center;
-    text-align: left;
+    text-align: center;
 
+
+    background-image: linear-gradient(#155872, #114769);
+    /* border: 1px solid black; */
+    border-radius: 12px;
+    /* margin-bottom: 22px; */
+    /* margin-left: 30px; */
+    color: #e0ffff;
+    /* padding: 16px 8px 40px 8px; */
+    /* width: 180px; */
+    height: auto;
 }
 
 .Book-name{
     font-size: 76px;
     color: white;
-    width: 70%;
-    white-space: nowrap;
+    /* width: 70%; */
+    white-space: pre-wrap;
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -21,11 +31,10 @@
     margin-bottom: 20px;
     color: #bfbfbf;
 }
-.Info-Container{
+.Info-Container-BookPage{
     font-size: 33px;
-    justify-content: left;
-    width: auto;
-    color: #bebebe;
+    color: white;
+    font-weight: bold;
 }
 
 .children {
@@ -46,16 +55,16 @@
 
 }
 #botton-wishlist {
-    margin-left: 20px;
+    margin: 20px;
 }
-#botton-back {
+/* #botton-back {
 
-}
+} */
 .footer{
     margin-top: 5px;
     margin-bottom: 10px;
     justify-content: center;
     width: 100%;
-    color: white;
+    /* color: white; */
     text-align: center;
 }
