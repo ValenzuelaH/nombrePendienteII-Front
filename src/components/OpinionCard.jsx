@@ -15,7 +15,6 @@ class OpinionCard extends React.Component{
         this.deleteInput = this.deleteInput.bind(this);
         this.deleteOpinion = this.deleteOpinion.bind(this);
         this.editOpinion = this.editOpinion.bind(this);
-        this.handleSendClick = this.handleSendClick.bind(this);
         this.deleting = this.deleting.bind(this);
     }
 
