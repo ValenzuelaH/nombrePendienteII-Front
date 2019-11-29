@@ -13,27 +13,37 @@ export default class AuthorCarousel extends React.Component {
         super(props);
         this.state={
             authorBooks:[],
-            bookImages:[]
+            bookImages:[],
+            bookId:0
         }
 
         this.switchToBook = this.switchToBook.bind(this);
     }
 
     componentDidMount() {
-        findBookByAuthorName(this.props.book.authorName).then(res => this.setAuthorBooks(res));
-
-        // console.log("PROPS:", this.props);
-
-        // this.setState({
-        //     authorBooks:[{id:1,name:"prueba1",priceInPesos:999},{id:2,name:"prueba2",priceInPesos:999},{id:3,name:"prueba3",priceInPesos:999},{id:4,name:"prueba4",priceInPesos:999},{id:5,name:"prueba5",priceInPesos:999},{id:6,name:"prueba6",priceInPesos:999}]
-        // })
+        if (this.state.bookId != this.props.book.id) {
+            this.setState({bookId:this.props.book.id});
+            findBookByAuthorName(this.props.book.authorName).then(res => this.setAuthorBooks(res));
+        }
     }
 
     componentDidUpdate() {
-        findBookByAuthorName(this.props.book.authorName).then(res => this.setAuthorBooks(res));
+        if (this.state.bookId != this.props.book.id) {
+            this.setState({bookId:this.props.book.id})
+            findBookByAuthorName(this.props.book.authorName).then(res => this.setAuthorBooks(res));
+        }
     }
+
     // getRandomImages() {
-    //     axios.get()
+    //     let imagesArray = []
+
+    //     axios.get('https://source.unsplash.com/collection/430456')
+    //     .then(response => {
+    //         console.log("Respuesta: ", response);
+    //     })
+    //     .catch(e => {
+    //         console.log(e);
+    //     })
     // }
 
     setAuthorBooks(authorBooksArray) {
@@ -70,7 +80,7 @@ export default class AuthorCarousel extends React.Component {
                         {this.state.authorBooks.map(current=>(
                             <div className="out" key={current.id}>
                                 <div className="card card-carousel">
-                                    <img className="rounded-circle" alt={"libro del mismo autor"} src="https://source.unsplash.com/collection/430456" height={150} width={150}></img>
+                                    <img className="rounded-circle" alt={"libro del mismo autor"} src={"https://source.unsplash.com/featured/?book,"+current.id} height={150} width={150} onClick={this.switchToBook} id={current.id}></img>
                                     <div className="card-body">
                                         <h5 className="card-title">{current.name}</h5>
                                         <small className="card-text text-sm-center text-muted">${current.priceInPesos}</small>

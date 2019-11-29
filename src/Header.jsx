@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import './css/Header.css';
-import logo from './images/logo2.png';
+import logo from './images/logoAzul2.png';
 
 class Header extends React.Component{
   constructor(props) {
@@ -73,7 +73,7 @@ class Header extends React.Component{
             {dropdown}
           </div>
           <div className="logo">
-          <a href="/">
+          <a href="/app">
               
               <img src={logo} alt={this.props.title} title={this.props.title}></img>
 
