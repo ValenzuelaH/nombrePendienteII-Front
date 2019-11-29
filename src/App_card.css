@@ -23,6 +23,7 @@
 }
 .title-name{
     text-transform: uppercase;
+    font-weight: bold;
     font-size: 22px;
 }
 .price-container{
