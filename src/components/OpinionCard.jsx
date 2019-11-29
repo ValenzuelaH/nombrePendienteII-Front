@@ -1,5 +1,6 @@
 import React from 'react';
 import './Opinion.css';
+import {deleteMessage } from '../api';
 
 class OpinionCard extends React.Component{
     constructor(props) {
@@ -14,7 +15,7 @@ class OpinionCard extends React.Component{
         this.deleteInput = this.deleteInput.bind(this);
         this.deleteOpinion = this.deleteOpinion.bind(this);
         this.editOpinion = this.editOpinion.bind(this);
-        this.handleSendClick = this.handleSendClick.bind(this);
+        this.deleting = this.deleting.bind(this);
     }
 
     handleInputChange(e) {
@@ -31,16 +32,12 @@ class OpinionCard extends React.Component{
     }
 
     deleteOpinion() {
-        //borrar la opinion en el back
-
-        //if (borro == "200") {
             this.setState({
                 input: "",
                 date: "",
                 time: "",
                 showOp: false
             })
-        // }
     }
 
     editOpinion(e) {
@@ -52,25 +49,13 @@ class OpinionCard extends React.Component{
 
     }
 	
-	handleSendClick(e) {
-        if (! this.state.input.trim() == "" ){
-            
-    
-        //pasar valores al backend
-    
-        //borrar el texto del input
-        this.deleteInput();
-    
-        //mostrar mensaje de "opinion enviada"
-    
-        // if (respuesta == "200") {
-            alert("La opinión fue enviada con éxito.");
-            e.preventDefault();
-            // }
-        }
+	deleting(){
+        deleteMessage({id:this.props.opinion.id})
+        this.props.delete()
     }
     
     render(){
+        const user = localStorage.getItem('user');
         return(
             <div className="card">
                 <br></br>
@@ -80,8 +65,8 @@ class OpinionCard extends React.Component{
                 <div className="card-body">
                     <blockquote className="blockquote mb-0">
                         <p><cite>{this.props.opinion.msj}</cite></p>
-                        <button href="#" className="btn btn-outline-danger izq" >Borrar</button>
-                        <button href="#" className="btn btn-outline-success der">Editar</button>
+                        {this.props.opinion.user.userName == user && <button onClick={this.deleting.bind(this)} className="btn btn-outline-danger izq" >Borrar</button>}
+                        {this.props.opinion.user.userName == user && <button href="#" className="btn btn-outline-success der">Editar</button>}
                     </blockquote>
                 </div>
                 <br></br>

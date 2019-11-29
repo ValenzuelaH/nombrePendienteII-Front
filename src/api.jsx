@@ -21,3 +21,4 @@ export const newOpinion = body => request('post', 'opinion/new_opinion', body);
 export const newMessage = body => request('post', 'message/new', body);
 export const addSaldo = body => request('post', 'app/addSaldo', body);
 export const agregarACarrito = body => request ('post', 'app/agregarACarrito', body);
+export const deleteMessage = body => request ('delete', 'opinion/delete/'+ body.id);
