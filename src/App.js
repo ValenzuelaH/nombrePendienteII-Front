@@ -75,6 +75,7 @@ class App extends React.Component {
     const myBooks = this.state.books.map((book, i) => {
       return(
             <div className="card-container">
+                <img className="rounded-circle" alt={book.name} title={book.name} src={"https://source.unsplash.com/featured/?book,"+book.id} height={100} width={100} onClick={this.readDescription.bind(this, book.id)}></img>
                 <div  className="title-name">{book.name}</div>
                 <div className="author-container">{book.authorName}</div>
               <div>{"Paginas: " + book.amountOfPages}</div>
@@ -89,6 +90,7 @@ class App extends React.Component {
       return (
         <div id="fondo" className="App">
           <RedirectIfNotLogged></RedirectIfNotLogged>
+          <Header title= {this.state.title}></Header>
             {/*<Navigation title = {this.state.title} books={this.state.books} fromComponent="/home"/>*/}
           <NavigationFachero title={this.state.title} books_length = {this.state.books.length} />
             <div className="container">

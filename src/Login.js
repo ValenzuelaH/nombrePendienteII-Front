@@ -19,6 +19,10 @@ export default class Login extends React.Component{
         this.validateName = this.validateName.bind(this);
     }
 
+    componentDidMount() {
+        localStorage.clear();
+    }
+
     handleName(event){
         if (!event.target.value.includes('@')) {
             this.setState({nameError: ""});

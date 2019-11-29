@@ -38,3 +38,7 @@ img {
 .slick-slider{
     margin-bottom: 1.5rem;
 }
+
+.rounded-circle{
+    cursor: pointer;
+}
