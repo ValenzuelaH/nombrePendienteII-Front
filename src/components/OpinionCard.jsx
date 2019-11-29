@@ -50,6 +50,7 @@ class OpinionCard extends React.Component{
     }
 	
 	deleting(){
+        alert("Esta accion es irreversible")
         deleteMessage({id:this.props.opinion.id})
         this.props.delete()
     }
