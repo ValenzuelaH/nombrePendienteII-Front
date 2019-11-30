@@ -1,5 +1,4 @@
 import React from 'react';
-import { newMessage } from "../api";
 
 export default class ContactForm extends React.Component {
   constructor(props){
@@ -13,11 +12,13 @@ export default class ContactForm extends React.Component {
     }
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.reset = this.reset.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.send(this.state);
+  
     this.setState({
       name: '',
       tel: '',
@@ -25,6 +26,7 @@ export default class ContactForm extends React.Component {
       email: '',
       message: ''
     });
+    
   }
 
  
@@ -96,7 +98,7 @@ reset(){
              <button type="submit" className="btn btn-primary">
               Enviar!
               </button>
-              <button action={this.reset} type="reset" className="btn btn-primary">
+              <button onClick={this.reset} type="reset" className="btn btn-primary">
               Limpiar!
               </button>
               </form>
