@@ -1,7 +1,7 @@
 import React from 'react';
 import OpinionCard from './OpinionCard';
 import OpinionForm from './OpinionForm';
-import {findAllOpinionsForABook, deleteMessage} from '../api';
+import {findAllOpinionsForABook} from '../api';
 
 
 class ListOpinion extends React.Component{
@@ -24,7 +24,7 @@ class ListOpinion extends React.Component{
     setOpinions(allOpinion){
         this.setState({
             showOp: true,
-            noresult: allOpinion.length == 0,
+            noresult: allOpinion.length === 0,
             opinions: allOpinion
         })
     }
@@ -48,7 +48,7 @@ class ListOpinion extends React.Component{
         const myOpinions = this.state.opinions.map((opinion, i) => {
             return(
               <div key={i}>
-                <OpinionCard delete={this.handleDeleteOpinion.bind(this, i)}opinion={opinion} style={{}}opinion={opinion}/>
+                <OpinionCard delete={this.handleDeleteOpinion.bind(this, i)} style={{}}opinion={opinion}/>
               </div>
               )
     })

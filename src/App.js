@@ -74,7 +74,7 @@ class App extends React.Component {
     
     const myBooks = this.state.books.map((book, i) => {
       return(
-            <div className="card-container">
+            <div className="card-container" key={i}>
                 <img className="rounded-circle" alt={book.name} title={book.name} src={"https://source.unsplash.com/featured/?book,"+book.id} height={100} width={100} onClick={this.readDescription.bind(this, book.id)}></img>
                 <div  className="title-name">{book.name}</div>
                 <div className="author-container">{book.authorName}</div>

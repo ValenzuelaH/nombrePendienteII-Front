@@ -66,8 +66,8 @@ class OpinionCard extends React.Component{
                 <div className="card-body">
                     <blockquote className="blockquote mb-0">
                         <p><cite>{this.props.opinion.msj}</cite></p>
-                        {this.props.opinion.user.userName == user && <button onClick={this.deleting.bind(this)} className="btn btn-outline-danger izq" >Borrar</button>}
-                        {this.props.opinion.user.userName == user && <button href="#" className="btn btn-outline-success der">Editar</button>}
+                        {this.props.opinion.user.userName === user && <button onClick={this.deleting.bind(this)} className="btn btn-outline-danger izq" >Borrar</button>}
+                        {this.props.opinion.user.userName === user && <button href="#" className="btn btn-outline-success der">Editar</button>}
                     </blockquote>
                 </div>
                 <br></br>

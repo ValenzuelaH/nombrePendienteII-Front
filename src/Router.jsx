@@ -3,7 +3,6 @@ import React from 'react';
 import { Switch, Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import Prueba from './Prueba';
 import Content from './Content';
 import AboutUs from './AboutUs';
 import SwitcherLogInRegister from "./SwitcherLogInRegister";
