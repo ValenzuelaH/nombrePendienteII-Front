@@ -97,7 +97,7 @@ export default class Content extends React.Component{
                     </div>
                     <div className="col-md-8">
                       <div className="row">
-                          { this.state.mustBeRender && searchResult || <NoResult />}
+                          { (this.state.mustBeRender && searchResult) || <NoResult />}
                         { this.state.showBook && <BookPage back={this.callToBack} book={this.state.toShow[this.state.go]}/> }
                       </div>
                   </div>

@@ -22,3 +22,5 @@ export const newMessage = body => request('post', 'message/new', body);
 export const addSaldo = body => request('post', 'app/addSaldo', body);
 export const agregarACarrito = body => request ('post', 'app/agregarACarrito', body);
 export const deleteMessage = body => request ('delete', 'opinion/delete/'+ body.id);
+export const comprar = body => request('post', 'app/comprar/' + body.username);
+export const enviarMail = body => request('post', 'mail', body);

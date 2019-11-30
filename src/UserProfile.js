@@ -1,6 +1,6 @@
 import React from "react";
 import './UserProfile.css';
-import {buscarUsuario} from "./api";
+import {buscarUsuario, comprar, enviarMail} from "./api";
 import RedirectIfNotLogged from './components/RedirectIfNotLogged';
 
 export default class UserProfile extends React.Component{
@@ -14,7 +14,7 @@ export default class UserProfile extends React.Component{
             wishlist: [],
             carrito: [],
             tienecompra: false,
-            teAlcanzaLaPlata: false
+            teAlcanzaLaPlata: false,
         }
         this.logOut = this.logOut.bind(this);
         this.handleRes = this.handleRes.bind(this);
@@ -22,6 +22,7 @@ export default class UserProfile extends React.Component{
         this.costeCarrito = this.costeCarrito.bind(this);
         this.comprarCarrito = this.comprarCarrito.bind(this);
         this.goBack = this.goBack.bind(this);
+        this.updateUserAfterBuy = this.updateUserAfterBuy.bind(this);
     }
     logOut(){
         localStorage.clear();
@@ -30,7 +31,6 @@ export default class UserProfile extends React.Component{
 
     componentDidMount() {
         const user = localStorage.getItem('user');
-        console.log("skere")
         buscarUsuario({
             username: user
         }).then(res => this.handleRes(res))
@@ -44,19 +44,35 @@ export default class UserProfile extends React.Component{
             birthday: userObject.birthday_date,
             wishlist: userObject.wishlist,
             carrito: userObject.carrito,
-            saldo: userObject.saldo
+            saldo: userObject.saldo,
         });
     }
     comprarCarrito(){
-        const coste_de_carrito = this.costeCarrito()
+        const coste_de_carrito = this.costeCarrito();
         if(coste_de_carrito === 0){
-            this.setState({tienecompra: true})
+            this.setState({tienecompra: true});
             return;
         }
         if(coste_de_carrito > this.state.saldo){
-            this.setState({teAlcanzaLaPlata: true})
+            this.setState({teAlcanzaLaPlata: true});
             return;
         }
+        const user = localStorage.getItem('user');
+        const carrito = this.state.carrito;
+        comprar({
+            username: user
+        }).then(res => this.updateUserAfterBuy(res));
+    }
+    updateUserAfterBuy(res){
+        this.setState({
+            carrito: res.carrito,
+            saldo: res.saldo
+        });
+        enviarMail({
+            to: this.state.email,
+            message: "Felicidades por tu compra",
+            subject: "Compra exitosa!"
+        }).then(res => console.log(res))
     }
     agregarSaldo(){
         this.props.history.push('/agregarSaldo')

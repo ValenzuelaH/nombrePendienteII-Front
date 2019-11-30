@@ -1,7 +1,7 @@
 import React from 'react';
 import ContactForm from './components/ContactForm';
 import Navigation from './components/Navigation';
-import { newMessage, allbooks } from "./api";
+import { newMessage, enviarMail } from "./api";
 import Header from './Header';
 import Footer from './Footer';
 import RedirectIfNotLogged from './components/RedirectIfNotLogged';
@@ -25,7 +25,7 @@ class ContentContact extends React.Component {
                 </div>
                 <div className="map" style={{padding:"20px 0px"}}>
                     <h4>Ubicación:</h4>
-                    <div style={{width: "50%"}}><iframe width="100%" height="400" src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=corrientes%20800+(BOOK34)&ie=UTF8&t=&z=14&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><br />                   
+                    <div style={{width: "50%"}}><iframe title={"map"} width="100%" height="400" src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=corrientes%20800+(BOOK34)&ie=UTF8&t=&z=14&iwloc=B&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe></div><br />                   
                 </div> 
             </div>
       </div>
@@ -48,8 +48,11 @@ export default class Contact extends React.Component {
     newMessage(msj).then(res => this.setState({
       flag: true
     }))
-    console.log("flag:");
-    console.log(this.state.flag);
+    enviarMail({
+      to: 'booksninethreequarters@gmail.com',
+      message: this.state.message,
+      subject: "El usuario " + this.state.name + " ha enviado un mensaje"
+    }).then(res => console.log(res))
   }
 
   render(){
