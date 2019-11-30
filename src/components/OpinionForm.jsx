@@ -27,7 +27,7 @@ export default class OpinionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if(!this.state.message.trim() === '' ){
+    if(!this.state.message.trim() == '' ){
          const pseudo_opinion = {
           "msj": this.state.message,
           "user": this.state.user,
