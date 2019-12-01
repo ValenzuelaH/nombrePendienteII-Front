@@ -6,7 +6,6 @@ import Header from './Header';
 import Footer from './Footer';
 import RedirectIfNotLogged from './components/RedirectIfNotLogged';
 
-
 class ContentContact extends React.Component {
   render(){
     return(
@@ -57,12 +56,14 @@ export default class Contact extends React.Component {
   }
 
   render(){
+      const title = ''
+    //  const books = allbooks()
         return(
           <div>
             <RedirectIfNotLogged></RedirectIfNotLogged>
             <div>  
                 <Header/>
-                <Navigation books={{}}/>
+                <Navigation title={title} books = {[]} />
                 <ContentContact/>
                 {!this.state.flag && <ContactForm send={this.send}/>}
                 {this.state.flag && <div className="alert alert-danger" role="alert">  Su informacion esta siendo procesada! </div>}

@@ -24,3 +24,4 @@ export const agregarACarrito = body => request ('post', 'app/agregarACarrito', b
 export const deleteMessage = body => request ('delete', 'opinion/delete/'+ body.id);
 export const comprar = body => request('post', 'app/comprar', body);
 export const enviarMail = body => request('post', 'mail', body);
+export const topN = body => request('get','top');

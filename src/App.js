@@ -9,8 +9,9 @@ import Navigation from './components/Navigation';
 import Footer from './Footer';
 import BookPage from './BookPage';
 import Header from './Header';
-import NavigationFachero from "./NavigationFachero";
+//import NavigationFachero from "./NavigationFachero";
 import RedirectIfNotLogged from './components/RedirectIfNotLogged';
+import TopN from './components/TopN';
 
 class App extends React.Component {
   constructor(props){
@@ -91,13 +92,14 @@ class App extends React.Component {
         <div id="fondo" className="App">
           <RedirectIfNotLogged></RedirectIfNotLogged>
           <Header title= {this.state.title}></Header>
-            {/*<Navigation title = {this.state.title} books={this.state.books} fromComponent="/home"/>*/}
-          <NavigationFachero title={this.state.title} books_length = {this.state.books.length} />
+            <Navigation title = {this.state.title} books={this.state.books} fromComponent="/home"/>
+          {/*<NavigationFachero title={this.state.title} books_length = {this.state.books.length} />*/}
             <div className="container">
              <div className="row mt-4">
                 {/* <div className="col-md-3 text-center">
                 </div> */}
                 <div className="col-md-12">
+                     <TopN/>
                   <div className="row">
                       { this.state.showList && myBooks }
                     { this.state.showBook && <BookPage back={this.callToBack} book={this.state.allBooksStatic.find(elem => elem.id == this.state.go)} changeToBookById={this.switchToBook}/> }

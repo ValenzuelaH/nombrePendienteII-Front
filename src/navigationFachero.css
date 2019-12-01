@@ -4,7 +4,6 @@ ul {
     padding: 0;
 }
 
-
 li {
     display: inline;
 }
@@ -12,31 +11,34 @@ li {
 #white{
     color:white;
 }
+
 .navigation-container{
     background-color: #071b57;
     height: 60px;
-
     padding-top: 20px;
 }
 
 .home-container{
-    margin-left: 650px;
     color:white;
+    margin-left: 10px;
+    padding: 8px 8px 8px 8px;
 }
 
 .quien-container{
-    margin-left: 40px;
     color:white;
+    margin-left: 10px;
+    padding: 8px 8px 8px 8px;
 }
 
 .contacto-conteiner{
-    margin-left: 40px;
     color:white;
+    margin-left: 10px;
+    padding: 8px 8px 8px 8px;
 }
 
 .perfil-container{
-    margin-left: 40px;
     color:white;
+    margin-left: 10px;
     border: 1px solid #FFFFFF;
     border-radius: 5px;
     padding: 4px 4px 4px 4px;

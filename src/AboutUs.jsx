@@ -6,6 +6,7 @@ import Navigation from './components/Navigation';
 import './App.css';
 import { allbooks } from './api';
 import RedirectIfNotLogged from './components/RedirectIfNotLogged';
+//import NavigationFachero from "./NavigationFachero";
 
 class AboutUs extends React.Component{
 
@@ -27,7 +28,8 @@ class AboutUs extends React.Component{
             <React.Fragment>
                 <RedirectIfNotLogged></RedirectIfNotLogged>
                 <Header title = {title}></Header>
-                 <Navigation title = {title} books={this.state.books} fromComponent="/about_us"/>
+                <Navigation title={title} books = {this.state.books} />
+          
                 <body className="aboutUs">
                     <div class="container">
                             <h1 class="title-aboutus">Nuestra misión es: Proveer de buena lectura y accesible, tanto a los fanáticos del formato físico, como a los del digital.</h1>

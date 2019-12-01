@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../navigationFachero.css';
 
 export default class NavBarItem extends React.Component {
 
@@ -14,8 +15,10 @@ export default class NavBarItem extends React.Component {
     render(){
         return(
             <li className="nav-item">
-                <Link className="nav-link" to={this.props.route}>
-                    {this.props.name === "Usuario"? this.props.user : this.props.name }
+                <Link id="white" className={this.props.class}
+                //"nav-link" 
+                to={this.props.route}>
+                    { this.props.name }
                 </Link>
             </li>);
     }
