@@ -47,21 +47,19 @@ export default class Contact extends React.Component {
   send(msj) {
     newMessage(msj).then(res => this.setState({
       flag: true
-    }))
-    enviarMail({
-      to: 'booksninethreequarters@gmail.com',
-      message: this.state.message,
-      subject: "El usuario " + this.state.name + " ha enviado un mensaje"
-    }).then(res => console.log(res))
+    })).then(res => enviarMail(
+      {
+        to: 'booksninethreequarters@gmail.com',
+        message: msj.message,
+        subject: "El usuario " + msj.name + " ha enviado un mensaje"
+      }
+    )).then(res => console.log(res))
   }
 
   render(){
         return(
           <div>
             <RedirectIfNotLogged></RedirectIfNotLogged>
-            <div>
-              <h1>ACA</h1>
-            </div>
             <div>  
                 <Header/>
                 <Navigation books={{}}/>

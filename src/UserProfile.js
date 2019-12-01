@@ -37,7 +37,6 @@ export default class UserProfile extends React.Component{
     }
 
     handleRes(userObject){
-        console.log(userObject)
         this.setState({
             username: userObject.userName,
             email: userObject.email,
@@ -70,7 +69,7 @@ export default class UserProfile extends React.Component{
         });
         enviarMail({
             to: this.state.email,
-            message: "Felicidades por tu compra",
+            message: "Felicidades por tu compra!",
             subject: "Compra exitosa!"
         }).then(res => console.log(res))
     }
