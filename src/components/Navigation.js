@@ -21,7 +21,7 @@ class Navigation extends React.Component{
                 </span>
               </li>
               {items.map(function(currentValue, index){
-                return <NavBarItem key={currentValue.index}
+                return <NavBarItem key={index}
                                    name={currentValue.name}
                                    route={currentValue.route}
                                    class={currentValue.class}/>;  

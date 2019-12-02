@@ -9,17 +9,17 @@ import RedirectIfNotLogged from './components/RedirectIfNotLogged';
 class ContentContact extends React.Component {
   render(){
     return(
-      <div>
+      <div style={{"color":"white"}}>
           <h3 className="title"> Contacto </h3>
             <div className="contact-top">
               <div className="container">
                 <div className="contact-info">
                   <h4>Lineas rotativas: </h4>
                     <div style={{ width: "450px" , height: "170px"}}>
-                        <p style={{textAlign: "left"}}>Teléfono: +54 011 1234-5678</p>
-                        <p style={{textAlign: "left"}}>FAX: +54 011 2345-6789</p>
-                        <p style={{textAlign: "left"}}>E-mail: <a href="mailto:info@example.com">mail@example.com</a></p>
-                        <p style={{textAlign: "left"}}> Calle Falsa 123 CP 1826 Bs.As. Argentina.</p>
+                        <p style={{"textAlign": "left"}}>Teléfono: +54 011 1234-5678</p>
+                        <p style={{"textAlign": "left"}}>FAX: +54 011 2345-6789</p>
+                        <p style={{"textAlign": "left"}}>E-mail: <a href="mailto:info@example.com">mail@example.com</a></p>
+                        <p style={{"textAlign": "left"}}> Calle Falsa 123 CP 1826 Bs.As. Argentina.</p>
                     </div>	  
                 </div>
                 <div className="map" style={{padding:"20px 0px"}}>
@@ -27,7 +27,7 @@ class ContentContact extends React.Component {
                     <div style={{width: "50%"}}><iframe title={"map"} width="100%" height="400" src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=corrientes%20800+(BOOK34)&ie=UTF8&t=&z=14&iwloc=B&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe></div><br />                   
                 </div> 
             </div>
-      </div>
+        </div>
       </div>      
     );
   }
