@@ -19,7 +19,6 @@ export default class TopN extends React.Component {
     }
 
     componentDidMount(){
-		topN().then(res=>console.log(res))
 		topN().then(res=>this.setState({top:res}))
     }
 
