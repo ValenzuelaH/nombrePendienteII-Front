@@ -76,21 +76,24 @@ export default class AuthorCarousel extends React.Component {
                     // </div>
                     <span></span>
                 ):(
-                    <Slider {...settings}>
-                        {this.state.authorBooks.map(current=>(
-                            <div className="out" key={current.id}>
-                                <div className="card card-carousel">
-                                    <img className="rounded-circle" alt={"libro del mismo autor"} src={"https://source.unsplash.com/featured/?book,"+current.id} height={150} width={150} onClick={this.switchToBook} id={current.id}></img>
-                                    <div className="card-body">
-                                        <h5 className="card-title">{current.name}</h5>
-                                        <small className="card-text text-sm-center text-muted">${current.priceInPesos}</small>
-                                        <br/>
-                                        <button className="ver-mas-button" onClick={this.switchToBook} id={current.id}>Ver más!</button>
+                    <Fragment>
+                        <h3>Libros del mismo autor</h3>
+                        <Slider {...settings}>
+                            {this.state.authorBooks.map(current=>(
+                                <div className="out" key={current.id}>
+                                    <div className="card card-carousel">
+                                        <img className="rounded-circle" alt={"libro del mismo autor"} src={"https://source.unsplash.com/featured/?book,"+current.id} height={150} width={150} onClick={this.switchToBook} id={current.id}></img>
+                                        <div className="card-body">
+                                            <h5 className="card-title">{current.name}</h5>
+                                            <small className="card-text text-sm-center text-muted">${current.priceInPesos}</small>
+                                            <br/>
+                                            <button className="ver-mas-button" onClick={this.switchToBook} id={current.id}>Ver más!</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                    </Slider>
+                            ))}
+                        </Slider>
+                    </Fragment>
                 )}
             </Fragment>
         )

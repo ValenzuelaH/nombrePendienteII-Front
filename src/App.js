@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import  { Redirect } from 'react-router-dom'
 import './App.css';
 import './App_card.css'
@@ -99,10 +99,20 @@ class App extends React.Component {
                 {/* <div className="col-md-3 text-center">
                 </div> */}
                 <div className="col-md-12">
-                     <TopN/>
                   <div className="row">
-                      { this.state.showList && myBooks }
-                    { this.state.showBook && <BookPage back={this.callToBack} book={this.state.allBooksStatic.find(elem => elem.id == this.state.go)} changeToBookById={this.switchToBook}/> }
+                      { this.state.showList && 
+                      <Fragment>
+                        <div className="col-md-12">
+                          <TopN changeToBookById={this.switchToBook}/>
+                        </div>
+                        {myBooks} 
+                      </Fragment>
+                      }
+                    { this.state.showBook && 
+                      <Fragment>
+                        <BookPage back={this.callToBack} book={this.state.allBooksStatic.find(elem => elem.id == this.state.go)} changeToBookById={this.switchToBook}/> 
+                      </Fragment>
+                    }
                   </div>
               </div>
             </div>
